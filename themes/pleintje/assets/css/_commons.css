@@ -25,7 +25,7 @@ body {
     color: #525A61;
     font-size: 16px;
     line-height: 22.4px;
-    font-size: 400;
+    font-weight: 400;
     /*font-family: 'Open Sans', sans-serif;*/
     font-family: 'Bitter', serif;
 }
@@ -326,8 +326,47 @@ form .dropdown-menu li a{
 	width: 100%;
 }
 
-
-
+/*common btn*/
+.fl-pink-btn{
+    width: 172px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #E48AA4;
+    background: #E48AA4;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+.fl-pink-btn:hover{
+	background: transparent;
+	color: #E48AA4;
+}
+.fl-trnsprnt-btn{
+    width: 238px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #E48AA4;
+    background: transparent;
+    font-size: 16px;
+    color: #E48AA4;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+.fl-trnsprnt-btn:hover{
+	background: #E48AA4!important;
+	border-color: #E48AA4!important;
+	color: #fff!important;
+}
 
 
 /*page-body-rt*/

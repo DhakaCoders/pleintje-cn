@@ -54,3 +54,17 @@
 .bnr-rt-desc p{
 	margin-bottom: 20px;
 }
+.bnr-rt-desc-btn{
+	margin: 0 -7px;
+	display: flex;
+	align-items: center;
+}
+.bnr-rt-desc-btn > a{
+	
+	margin: 0 7px;
+}
+.bnr-rt-desc-btn .brd-2nd-btn{
+	width: 143px;
+	border-color: #525A61;
+	color: #525A61;
+}
