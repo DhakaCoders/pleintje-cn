@@ -80,12 +80,22 @@
 
 
 .industry-sec{
-	padding: 87px 0;
 }
 .industry-cntlr{
 	text-align: center;
 	color: #fff;
-	padding: 0 20px;
+	padding: 87px 20px;
+	position: relative;
+}
+.industry-cntlr:after{
+	position: absolute;
+	content: "";
+	width: 33.92%;
+	height: 12px;
+	background: #EDAAC1;
+	right: 90px;
+	top: 0;
+	transform: translateY(-50%);
 }
 .industry-title{
 	margin-bottom: 5px;
@@ -105,6 +115,11 @@
 	color: #E48AA4!important;
 }
 
+.about-us-sec{
+	background: #fdf9f8;
+	padding-top: 85px;
+}
+
 
 
 
@@ -117,7 +132,6 @@
 }
 .residents-cntlr{
 	position: relative;
-	padding: 87px 0;
 }
 .residents-rt-top-sqr{
 	position: absolute;
