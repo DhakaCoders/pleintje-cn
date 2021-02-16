@@ -1,5 +1,10 @@
 <svg width="251" height="207" viewBox="0 0 251 207" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="251" height="207">
+<rect opacity="0.9" width="250.006" height="206.167" transform="matrix(1 0 0 -1 0 206.709)" fill="#FCF9F7"/>
+</mask>
+<g mask="url(#mask0)">
 <rect opacity="0.1" x="-370.976" y="-238.178" width="806.471" height="642.915" fill="url(#pattern0)"/>
+</g>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0" transform="translate(-0.130416 -0.00421941) scale(0.00129981 0.00164533)"/>
