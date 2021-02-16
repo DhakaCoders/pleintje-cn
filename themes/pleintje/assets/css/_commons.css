@@ -50,7 +50,7 @@ data-value = normal*/
 /**
 Containers fluid
 */
-/*.container-fluid{
+.container-fluid{
 	padding-left: 30px;
 	padding-right: 30px;
 	margin-left: 2%;
@@ -68,7 +68,7 @@ Containers fluid
 .container-fluid .row .col-xs-1, .container-fluid .row .col-xs-10, .container-fluid .row .col-xs-11, .container-fluid .row .col-xs-12, .container-fluid .row .col-xs-2, .container-fluid .row .col-xs-3, .container-fluid .row .col-xs-4, .container-fluid .row .col-xs-5, .container-fluid .row .col-xs-6, .container-fluid .row .col-xs-7, .container-fluid .row .col-xs-8, .container-fluid .row .col-xs-9{
 	padding-left: 30px;
 	padding-right: 30px;
-}*/
+}
 
 
 /**
@@ -110,7 +110,7 @@ Containers
 	width: 100%;
 }
 .container-md{
-
+	max-width: 1200px;
 }
 
 .container-sm{
