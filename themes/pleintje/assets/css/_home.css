@@ -1,0 +1,56 @@
+.banner{
+
+}
+.banner-cntlr{
+	display: flex;
+	align-items: center;
+}
+.bnr-lft-cntlr{
+	width:  59.42%;
+	position: relative;
+}
+.bnr-lft{
+	overflow: hidden;
+	height: 725px;
+}
+.bnr-lft:hover .bnr-lft-img{
+	transform: scale(1.071);
+	-ms-transform: scale(1.071);
+	-webkit-transform: scale(1.071);
+	-o-transform: scale(1.071);
+}
+.bnr-lft-img{
+	height: 100%;
+	width: 100%;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	z-index: 2;
+}
+.bnr-lft-btm-sqr{
+	position: absolute;
+	bottom: -40px;
+	right: -40px;
+	height: 82px;
+	width: 90px;
+	border: 12px solid #e795ac;
+	z-index: -1;
+}
+.bnr-right{
+	display: flex;
+	align-items: center;
+	padding-left: 85px;
+	width: 40.98%;
+}
+.bnr-rt-desc{
+	margin-right: -110px;
+}
+.bnr-rt-desc-title{
+	
+}
+.bnr-rt-desc-sub-title{
+	color: #E48AA4;
+}
+.bnr-rt-desc p{
+	margin-bottom: 20px;
+}

@@ -206,7 +206,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
    /*start of Noyon*/
+   var hdrheight = $('.header-wrap').height();
+   var bnrheight = $('.banner').height();
+   var homeBody = hdrheight + bnrheight;
 
+   $(".home-body-rt").css('height', homeBody);
+
+   $(window).resize(function() { 
+    $(".home-body-rt").css('height', homeBody);
+  });
 
 
 

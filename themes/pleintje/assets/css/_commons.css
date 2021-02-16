@@ -325,3 +325,31 @@ form .dropdown-menu li a{
 .dropdown-menu.show{
 	width: 100%;
 }
+
+
+
+
+
+/*page-body-rt*/
+
+.page-body-rt{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 960px;
+	height: 631px;
+	background: #FCF9F7;
+	z-index: 0;
+}
+.home .page-body-rt{
+	display: none;
+}
+.home-body-rt{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 49.1%;
+	height: 631px;
+	background: #FCF9F7;
+	z-index: -1;
+}
