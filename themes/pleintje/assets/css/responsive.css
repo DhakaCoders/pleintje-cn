@@ -1,16 +1,40 @@
-@media(max-width: 1499px){
-
+@media(max-width: 1599px){
+	.container{
+		max-width: 1200px;
+	}
+	h1,.fl-h1{
+		font-size: 58px;
+	}
 }
 
 @media(max-width: 1399px){
-
+	.container{
+		max-width: 1100px;
+	}
+	h1,.fl-h1{
+		font-size: 52px;
+	}
 }
 
 @media(max-width: 1299px){
-
+	h1,.fl-h1{
+		font-size: 46px;
+	}
+	h2,.fl-h2{
+		font-size: 36px;
+	}
 }
 
 @media(max-width: 1199px){
+	h1,.fl-h1{
+		font-size: 40px;
+	}
+	h2,.fl-h2{
+		font-size: 32px;
+	}
+	h3,.fl-h3{
+		font-size: 28px;
+	}
 	.hide-lg{
 		display: none!important;
 	}
@@ -21,6 +45,27 @@
 }
 
 @media(max-width: 991px){
+	body{
+		font-size: 15px;
+	}
+	h1,.fl-h1{
+		font-size: 36px;
+	}
+	h2,.fl-h2{
+		font-size: 28px;
+	}
+	h3,.fl-h3{
+		font-size: 24px;
+	}
+	h4,.fl-h4{
+		font-size: 22px;
+	}
+	h5,.fl-h5{
+		font-size: 20px;
+	}
+	h6,.fl-h6{
+		font-size: 18px;
+	}
 	.hide-md{
 		display: none!important;
 	}
@@ -31,6 +76,27 @@
 }
 
 @media(max-width: 767px){
+	body{
+		font-size: 14px;
+	}
+	h1,.fl-h1{
+		font-size: 32px;
+	}
+	h2,.fl-h2{
+		font-size: 24px;
+	}
+	h3,.fl-h3{
+		font-size: 22px;
+	}
+	h4,.fl-h4{
+		font-size: 20px;
+	}
+	h5,.fl-h5{
+		font-size: 18px;
+	}
+	h6,.fl-h6{
+		font-size: 16px;
+	}
 	.hide-sm{
 		display: none!important;
 	}

@@ -14,21 +14,31 @@ a, a:hover, a:focus, button:hover, button:focus{
 	text-decoration: none;
 	outline: 0;
 }
-
+a{
+	color: #e48aa4;
+}
+a:hover{
+	color: #ec5487;
+}
 body {
-    background: #f8f8f8;
-    color: #000000;
-    font-size: 18px;
-    line-height: 24px;
-     font-family: 'Candara';
+    background: #fff;
+    color: #525A61;
+    font-size: 16px;
+    line-height: 22.4px;
+    font-size: 400;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Bitter', serif;
 }
 p{
-	line-height: 1.2;
+	line-height: 1.4;
 	margin-bottom: 15px;
 }
 ::selection {
   color: #fff;
   background: #512C36;
+}
+strong{
+	font-size: 700;
 }
 /*-- app gap use pattern --*/
 /*data-xxs = 575
@@ -96,7 +106,7 @@ Containers
 
 }
 .container{
-	max-width: 1200px;
+	max-width: 1430px;
 	width: 100%;
 }
 .container-md{
@@ -104,7 +114,7 @@ Containers
 }
 
 .container-sm{
-
+	max-width: 930px;
 }
 
 
