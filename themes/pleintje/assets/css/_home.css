@@ -4,6 +4,7 @@
 .banner-cntlr{
 	display: flex;
 	align-items: center;
+	padding-bottom: 140px;
 }
 .bnr-lft-cntlr{
 	width:  59.42%;
@@ -27,7 +28,14 @@
 	-webkit-transition: all 0.5s;
 	z-index: 2;
 }
-.bnr-lft-btm-sqr{
+.bnr-lft-top-img{
+	position: absolute;
+	top: 53px;
+	left: -80px;
+	height: 82px;
+	z-index: 2;
+}
+.bnr-rt-btm-sqr{
 	position: absolute;
 	bottom: -40px;
 	right: -40px;
