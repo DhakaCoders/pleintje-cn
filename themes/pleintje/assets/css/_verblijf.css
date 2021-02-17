@@ -21,9 +21,6 @@
 	position: absolute;
 	bottom: 20px;
 }
-/*.verblijf-single-slider{
-	padding-bottom: 25px;
-}*/
 .verblijf-single-slide-item-img{
 	min-height: 540px;
 }
@@ -37,4 +34,25 @@
 .verblijf-single-slide-nav-item{
 	padding-left: 12px;
 	padding-right: 12px;
+}
+
+
+.verblijf-slider-ctlr.verblijf-single-slide-item{
+	display: none!important;
+}
+.verblijf-slider-ctlr.verblijf-single-slide-item:first-child{
+	display: block!important;
+}
+.verblijf-slider-ctlr.slick-initialized.verblijf-single-slide-item{
+	display: block!important;
+}
+
+.verblijf-slider-ctlr.verblijf-single-slide-nav-item{
+	display: none!important;
+}
+.verblijf-slider-ctlr.verblijf-single-slide-nav-item:first-child{
+	display: block!important;
+}
+.verblijf-slider-ctlr.slick-initialized.verblijf-single-slide-nav-item{
+	display: block!important;
 }
