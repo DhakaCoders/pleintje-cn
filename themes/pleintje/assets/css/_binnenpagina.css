@@ -1022,3 +1022,9 @@ Gallery design
 
 }
 
+
+
+.cln-rv-grid-item-img-ctlr,
+.hm-nieuws-sec-grd-item-fea-img-cntlr{
+	position: relative;
+}
