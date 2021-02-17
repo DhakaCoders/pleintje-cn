@@ -119,12 +119,83 @@
 	background: #fdf9f8;
 	padding-top: 85px;
 }
+.about-us-cntlr{
+
+}
+.about-us-desc-cntlr{
+	position: relative;
+	z-index: 6;
+}
+.about-us-desc{
+	max-width: 831px;
+	width: 100%;
+	background: #fff;
+	margin-left: auto;
+	padding: 150px 90px 75px 115px;
+	position: relative;
+	z-index: 2;
+}
+.about-us-desc-title{
+	position: absolute;
+	line-height: 1;
+	left: -143px;
+	top: 62px;
+}
+.about-us-img-module{
+	margin: 0 -35px;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	margin-top: -212px;
+}
+.abus-img-mdul-col{
+	padding: 0 35px;
+}
+.abus-img-mdul-left-cntlr{
+	width:  47.68%;
+}
+.abus-img-mdul-left{
+	height: 775px;
+	position: relative;
+}
+.abus-imgmdlft-sqr{
+	position: absolute;
+	content: "";
+	height: 310px;
+	width: 177px;
+	background: #E48AA4;
+	opacity: 0.9;
+	backdrop-filter: blur(80px);
+	bottom: -24px;
+	right: -137px;
+	z-index: 3;
+}
+.abus-img-mdul-left-img{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	z-index: 4;
+}
+.abus-img-mdul-rt-cntlr{
+	width:  52.32%;
+	position: absolute;
+	right: 0;
+	bottom: 145px;
+}
+.abus-img-mdul-rt{
+	height: 363px;
+}
+.abus-img-mdul-rt-img{
+	height: 100%;
+	width: 100%;
+}
 
 
 
 
 .images-sec{
 	min-height: 690px;
+	margin-top: -50px;
 }
 
 .residents-sec{
@@ -132,6 +203,9 @@
 }
 .residents-cntlr{
 	position: relative;
+}
+.residents-cntlr:after{
+	content: none;
 }
 .residents-rt-top-sqr{
 	position: absolute;
