@@ -221,7 +221,25 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
     /*start of Shariful*/
 
-
+    $('.vsSlider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      fade: true,
+      dots: true,
+      asNavFor: '.vsNavSlider',
+      prevArrow: $('.verblijf-slider-ctlr .fl-nxt-prev .fl-prev'),
+      nextArrow: $('.verblijf-slider-ctlr .fl-nxt-prev .fl-next'),
+    });
+    $('.vsNavSlider').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.vsSlider',
+      dots: false,
+      arrows: false,
+      //centerMode: true,
+      focusOnSelect: true
+    });
 
 
 

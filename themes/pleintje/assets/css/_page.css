@@ -41,6 +41,15 @@
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	-ms-transition: all 0.5s;
+	z-index: 2;
+}
+.fl-prev i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
 }
 .fl-next{
 	position: absolute;
@@ -56,13 +65,22 @@
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	-ms-transition: all 0.5s;
+	z-index: 2;
+}
+.fl-next i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
 }
 
 .fl-prev:hover svg{
-	fill: #E0861A;
+	fill: #E48AA4;
 }
 .fl-next:hover svg{
-	fill: #E0861A;
+	fill: #E48AA4;
 }
 .fl-prev.slick-disabled,
 .fl-next.slick-disabled{
