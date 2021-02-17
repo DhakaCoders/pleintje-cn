@@ -309,19 +309,18 @@ Gallery design
 	padding: 0;
 	background-color: #fff;
 	border-top: none;
-	border-bottom: 2px solid #F8F8F8;
+	border-top: 1px solid #edeef0;
 	
 
 }
 .table-dsc table tbody tr td:last-child{
-	border-right: 2px solid #F8F8F8;
 	padding-left: 0;
 	padding-right: 36px;
 }
-.table-dsc table tbody tr td:last-child span,
+/*.table-dsc table tbody tr td:last-child span,
 .table-dsc table thead tr th:last-child span{
 	padding-left: 35px;
-}
+}*/
 .table-dsc table{
 	width: 100%;
 	padding: 20px;
@@ -358,46 +357,44 @@ Gallery design
 }
 .table-dsc table thead tr th:first-child,
 .table-dsc table tbody tr td:first-child{
-	padding-left: 25px;
-	padding-right: 25px;
-	width: 100px;
-	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 120px;
+	text-align: left;
 }
-.table-dsc table tbody tr td:first-child{
+/*.table-dsc table tbody tr td:first-child{
 	background: #F4F4F4;
 
-}
+}*/
 .table-dsc table tr th {
 	border: none;
-	color: #fff;
+	color: #212529;
 	font-weight: 700;
-	padding: 30px 0;
-	line-height: 17px;
-	letter-spacing: 0.02em;
-	background: #293377;
-	font-size: 18px;
-	line-height: 25px;
+	padding: 15px 0;
+	letter-spacing: 0.03em;
+	font-size: 12px;
+	line-height: 14px;
 	text-transform: uppercase;
 }
 .table-dsc table tr th span{
 	display: block;
 }
 .table-dsc table thead th span{
-	font-weight: 600;
-	font-size: 18px;
-	line-height: 30px
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 14px
 }
 .table-dsc table thead tr th,
 .table-dsc table tbody tr td{
-	padding-left: 51px;
+	padding-left: 15px;
 	padding-right: 0;
 }
 
 
 .table-dsc table thead tr th:first-child,
 .table-dsc table thead tr td:first-child{
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 15px;
+	padding-right: 15px;
 	font-weight: 700;
 }
 
@@ -407,14 +404,14 @@ Gallery design
 	margin: 0 3px;
 }
 .table-dsc table tbody tr td span{
-	padding-top: 26px;
-	padding-bottom: 26px;
+	padding-top: 12px;
+	padding-bottom: 12px;
 }
 .table-dsc table span{
 	display: block;
 }
-.table-dsc table tbody tr td span{
-	border-bottom: 1px solid #F8F8F8;
+.table-dsc table tbody tr td{
+	border-top: 1px solid #edeef0;
 }
 .table-dsc table tbody tr:last-child span{
 	border-bottom: none;
@@ -426,7 +423,68 @@ Gallery design
 }
 
 
+.dfp-cta-module{
+	margin-bottom: 58px;
+}
+.dfp-cta-module .residents-btn .fl-trnsprnt-btn{
+	width: 200px;
+}
 
+.dfp-des-lft{
+	float: left;
+	width: 50%;
+	padding-right: 30px;
+}
+.dfp-des-rgt{
+	float: right;
+	width: 50%;
+	padding-right: 30px;
+}
+
+
+.dfp-btn-module{
+	margin-bottom: 68px;
+	margin-top: 12px;
+}
+.dfp-btn-int{
+	display: inline-block;
+	vertical-align: baseline;
+	padding-right: 12px;
+}
+.dfp-btn-int a{
+	width: 170px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid #525A61;
+	background: transparent;
+	font-size: 16px;
+	line-height: 1;
+	color: #525A61;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+}
+.dfp-btn-int a.pb-bg{
+	background: #E48AA4;
+	border-color: #E48AA4;
+	color: #fff;
+}
+
+.dfp-single-img-slider-module{
+	margin-top: 50px;
+}
+.dfp-single-img-slider-module .verblijf-slider-ctlr{
+	padding-bottom: 20px;
+}
+.dfp-single-img-slider-module .verblijf-slider-ctlr .fl-next{
+	margin-top: -38px;
+}
+.dfp-single-img-slider-module .verblijf-slider-ctlr .fl-prev{
+	margin-top: -38px;
+}
 
 
 /*news details */

@@ -241,6 +241,17 @@ google.maps.event.addDomListener(window, 'load', initialize);
       focusOnSelect: true
     });
 
+    if( $('.bvsSlider').length ){
+      $('.bvsSlider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: true,
+        dots: true,
+        prevArrow: $('.verblijf-slider-ctlr .fl-nxt-prev .fl-prev'),
+        nextArrow: $('.verblijf-slider-ctlr .fl-nxt-prev .fl-next'),
+      });
+    }
 
 
      /*start of Milon*/
