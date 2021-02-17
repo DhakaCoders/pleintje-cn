@@ -83,6 +83,9 @@
 	text-transform: uppercase;
 	color: #FFFFFF;
 }
+.top-bar-rt ul li a:hover{
+	opacity: 0.7;
+}
 .top-bar-rt ul li a i{
 	position: absolute;
 	left: 0;
@@ -101,6 +104,7 @@
 .header-cntlr{
 	display: flex;
 	align-items: center;
+	position: relative;
 }
 .hdr-lft{
 
@@ -144,6 +148,9 @@ nav.main-nav > ul{
 nav.main-nav > ul > li{
 	padding: 0 22px;
 	position: relative;
+}
+nav.main-nav > ul > li.home-item > a{
+	padding-right: 28px;
 }
 nav.main-nav > ul > li.home-item > a span{
 	display: none;
@@ -279,4 +286,107 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	bottom: 0;
 	height: 4px;
 	background: #e48aa4;
+}
+
+/*mobile-hamburger*/
+.mobile-hamburger{
+	display: none;
+}
+
+
+/*responsive*/
+@media(max-width: 1599px){
+	nav.main-nav > ul{
+		margin: 0 -10px;
+	}
+	nav.main-nav > ul > li{
+		padding: 0 10px;
+	}
+}
+@media(max-width: 1499px){
+	
+}
+@media(max-width: 1399px){
+	.top-bar-cntlr{
+		padding-left: 60px;
+	}
+	nav.main-nav > ul{
+		margin: 0 -7px;
+	}
+	nav.main-nav > ul > li{
+		padding: 0 7px;
+	}
+	nav.main-nav > ul > li > a{
+		font-size: 13px;
+	}
+}
+@media(max-width: 1199px){
+	.header-cntlr{
+		min-height: 125px;
+		display: flex;
+		align-items: center;
+	}
+	.hdr-lft{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.mobile-hamburger{
+		display: block;
+		display: flex;
+		align-items: center;
+	}
+	.hamburger-icon{
+		width: 24px;
+		height: 7px;
+		position: relative;
+	}
+	.hamburger-icon span{
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 2px;
+		background: #e48aa4;
+	}
+	.hamburger-icon span:nth-child(2){
+		top: 5px;
+		width: 13px;
+	}
+	.hamburger-title{
+		font-family: Open Sans;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 1;
+		margin-bottom: 0;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		color: #212529;
+		padding-left: 7px;
+	}
+	.hdr-mdl{
+		display: none;
+	}
+	.hdr-right{
+		margin-left: auto;
+	}
+
+}
+@media(max-width: 991px){
+	
+}
+@media(max-width: 767px){
+	
+}
+@media(max-width: 639px){
+	
+}
+@media(max-width: 575px){
+	
+}
+
+@media(max-width: 479px){
+	
 }
