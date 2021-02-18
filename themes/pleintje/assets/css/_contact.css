@@ -99,6 +99,7 @@
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	border-radius: 0;
+	box-shadow: none !important;
 }
 
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-textarea{
