@@ -487,6 +487,46 @@ Gallery design
 }
 
 
+
+.realestat-sec{
+	margin-bottom: -90px;
+}
+.realestat-sec-inr{
+	text-align: center;
+	padding: 85px 0 80px;
+}
+
+.realestate-title{
+	color: #fff;
+	margin-bottom: 10px;
+}
+.realestat-sec-inr p{
+	color: #fff;
+	margin-bottom: 12px;
+}
+.realestat-sec-inr a.fl-trnsprnt-btn{
+	margin: 0 auto;
+	border-color: #fff;
+	color: #fff;
+	width: 280px;
+}
+
+.realestat-sec-inr{
+	position: relative;
+}
+
+.rs-square{
+	position: absolute;
+	top: 55px;
+	right: -58px;
+	height: 105px;
+	width: 113px;
+	border: 12px solid #EFB2C7;
+	background: transparent;
+	opacity: 0.9;
+	z-index: -1;
+}
+
 /*news details */
 
 
