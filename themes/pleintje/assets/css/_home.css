@@ -60,7 +60,7 @@
 	color: #E48AA4;
 }
 .bnr-rt-desc p{
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 }
 .bnr-rt-desc-btn{
 	margin: 0 -7px;
@@ -134,6 +134,12 @@
 	padding: 150px 90px 75px 115px;
 	position: relative;
 	z-index: 2;
+}
+.about-us-desc p{
+	margin-bottom: 20px;
+}
+.about-us-desc p:last-of-type{
+	margin-bottom: 30px;
 }
 .about-us-desc-title{
 	position: absolute;
