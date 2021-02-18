@@ -7,6 +7,7 @@ h1,h2,h3,h4,h5,h6{
 	margin-bottom: 20px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
+	color: #212529;
 }
 h1,.fl-h1{
 	font-size: 64px;
