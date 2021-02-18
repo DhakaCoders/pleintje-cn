@@ -333,3 +333,62 @@ contact-google-map-sec-wrp
 #googlemap{
 	height: 500px;
 }
+/*
+------------------
+ Responsive Css
+------------------
+*/
+@media(max-width: 1599px){
+	.contact-form-dsc p br{
+		display: none;
+	}
+}
+@media(max-width: 1399px){
+	.contact-form-info-cntlr {
+	    padding: 85px 30px 80px 60px;
+	}
+	.contact-form-dsc p br{
+		display: none;
+	}
+}
+
+@media(max-width: 1299px){
+	
+}
+
+@media(max-width: 1199px){
+	.contact-form-info-cntlr {
+	    padding: 70px 30px 70px 50px;
+	}
+}
+
+@media(max-width: 991px){
+	.contact-form-lft {
+	    width: 100%;
+	    padding-right: 0;
+	}
+	.contact-form-rgt {
+	    width: 100%;
+	    padding-right: 25px;
+	    margin-top: 70px;
+	}
+	
+}
+
+@media(max-width: 767px){
+	
+}
+
+@media(max-width: 575px){
+	
+
+}
+
+@media(max-width: 479px){
+
+
+}
+
+@media(max-width: 359px){
+
+}
