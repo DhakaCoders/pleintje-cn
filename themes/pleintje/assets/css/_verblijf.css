@@ -1,7 +1,10 @@
 
 
 
-
+.verblijf-con{
+	padding-top: 80px;
+	padding-bottom: 150px;
+}
 
 
 .verblijf-slider-ctlr{
@@ -55,4 +58,18 @@
 }
 .verblijf-slider-ctlr.slick-initialized.verblijf-single-slide-nav-item{
 	display: block!important;
+}
+
+
+
+.vl-ctlr .fl-dft-overflow-controller{
+	padding-top: 20px;
+}
+
+.vl-ctlr .dfp-tbl-wrap{
+	padding-top: 50px;
+}
+.vl-ctlr hr{
+	margin-top: 30px;
+	margin-bottom: 70px;
 }

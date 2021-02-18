@@ -36,7 +36,17 @@
 	text-transform: uppercase;
 	color: #FFFFFF;
 	padding-right: 24px;
+	padding-left: 28px;
 	position: relative;
+}
+.opened-time-title i{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
 }
 .opened-time-title:after{
 	content: "";
@@ -136,7 +146,8 @@ nav.main-nav ul li a{
 	color: #212529;
 }
 nav.main-nav ul li a:hover,
-nav.main-nav > ul > li.current-menu-item > a{
+nav.main-nav > ul > li.current-menu-item > a,
+nav.main-nav > ul > li.menu-item-has-children:hover > a{
 	color: #e48aa4;
 }
 nav.main-nav > ul{
