@@ -67,6 +67,10 @@
 .ovo-industry-sec{
 	padding-bottom: 90px;
 }
+.ovo-verblijf-con{
+	padding-top: 0!important;
+	padding-bottom: 0!important;
+}
 .ovo-verblijf-single-slider{
 	position: relative;
 }

@@ -207,16 +207,29 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
    /*start of Noyon*/
    var hdrheight = $('.header-wrap').height();
-   var bnrheight = $('.banner').height();
-   var homeBody = hdrheight + bnrheight;
+   var bnrheight = $('.hm-banner').height();
+   var hdrBnrHeight = hdrheight + bnrheight;
 
-   $(".home-body-rt").css('height', homeBody);
+   $(".home-body-rt").css('height', hdrBnrHeight);
 
    $(window).resize(function() { 
-    $(".home-body-rt").css('height', homeBody);
+    $(".home-body-rt").css('height', hdrBnrHeight);
   });
 
 
+   if( $('.mobile-hamburger').length ){
+    $('.mobile-hamburger').click(function(){
+      $('body').toggleClass('allWork');
+    });
+  }
+
+   if( $('li.menu-item-has-children a').length ){
+    $('li.menu-item-has-children a').click(function(e){
+     event.preventDefault();
+     $(this).next().slideToggle(300);
+     $(this).parent().toggleClass('sub-menu-arrow');
+   });
+  }
 
 
     /*start of Shariful*/
