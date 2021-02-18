@@ -44,3 +44,43 @@
 .over-ons-rt .abus-img-mdul-rt{
 	height: 390px;
 }
+
+
+.lftimg-rgtdes-sec{
+	padding: 130px 0 95px;
+}
+.lftimg-rgtdes-cntlr{
+
+}
+.fl-dft-lftimg-rgtdes{
+
+}
+.lftimg-rgtdes-cntlr .fl-dft-lftimg-rgtdes-lft{
+	width: 49.31%;
+	min-height: 360px;
+}
+.lftimg-rgtdes-cntlr .fl-dft-lftimg-rgtdes-rgt{
+	width: 50.69%;
+	padding: 15px 0 15px 112px;
+}
+
+.ovo-industry-sec{
+	padding-bottom: 90px;
+}
+.ovo-verblijf-single-slider{
+	position: relative;
+}
+.ovo-verblijf-single-slider:after{
+	position: absolute;
+	content: "";
+	width: 113px;
+	height: 105px;
+	background: #fff;
+	border: 12px solid #e896ad;
+	right: -50px;
+	bottom: -52px;
+	z-index: -1;
+}
+.ovo-gallery-wrap-sec{
+	padding: 40px 0 70px;
+}
