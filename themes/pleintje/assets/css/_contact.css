@@ -99,6 +99,7 @@
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	border-radius: 0;
+	box-shadow: none !important;
 }
 
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-textarea{
@@ -327,6 +328,7 @@ contact-google-map-sec-wrp
 }
 .contact-google-dsc-title{
 	margin-bottom: 12px !important;
+	color: #fff;
 }
 #googlemap{
 	height: 500px;

@@ -107,11 +107,14 @@
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 600;
 }
-.ftr-email a,
-.ftr-phone a{
-	/*text-decoration: underline;
-	text-decoration-color: #E48AA4;*/
+.ftr-email a{
 	border-bottom: 2px solid #E48AA4;
+}
+.ftr-phone span{
+	border-bottom: 2px solid #E48AA4;
+}
+.ftr-phone a{
+	margin-left: 5px;
 }
 
 .ftr-social-media{
