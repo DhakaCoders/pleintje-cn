@@ -391,4 +391,8 @@ form .dropdown-menu li a{
 	height: 631px;
 	background: #FCF9F7;
 	z-index: -1;
+	display: none;
+}
+.home .home-body-rt{
+	display: block;
 }

@@ -64,6 +64,10 @@
 }
 
 @media(max-width: 991px){
+	.home-body-rt,
+	.page-body-rt{
+		width: 50%!important;
+	}
 	body{
 		font-size: 15px;
 	}
@@ -148,6 +152,7 @@
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+
 }
 
 @media(max-width: 575px){
@@ -157,7 +162,16 @@
 	.show-xs{
 		display: block!important;
 	}
-
+	.fl-trnsprnt-btn{
+		height: 35px!important;
+		width: 100px!important;
+		font-size: 12px!important;
+	}
+	.fl-pink-btn{
+		height: 35px!important;
+		width: 120px!important;
+		font-size: 12px!important;
+	}
 }
 
 @media(max-width: 479px){
