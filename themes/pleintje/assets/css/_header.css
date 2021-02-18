@@ -136,7 +136,8 @@ nav.main-nav ul li a{
 	color: #212529;
 }
 nav.main-nav ul li a:hover,
-nav.main-nav > ul > li.current-menu-item > a{
+nav.main-nav > ul > li.current-menu-item > a,
+nav.main-nav > ul > li.menu-item-has-children:hover > a{
 	color: #e48aa4;
 }
 nav.main-nav > ul{

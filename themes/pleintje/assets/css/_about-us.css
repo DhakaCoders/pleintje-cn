@@ -1,0 +1,46 @@
+.over-ons-cntlr{
+	display: flex;
+	align-items: center;
+}
+.over-ons-lft{
+	width: 37.12%;
+	display: flex;
+	align-items: center;
+}
+.over-ons-lft-desc{
+	max-width: 465px;
+	width: 100%;
+}
+.over-ons-lft-title{
+	margin-bottom: 40px;
+}
+.over-ons-lft-sub-title{
+	color: #E48AA4;
+}
+.over-ons-rt{
+	width: 62.88%;
+	margin: 0 -10px;
+	position: relative;
+}
+.over-ons-rt .abus-img-mdul-col{
+	padding: 0 10px;
+}
+.over-ons-rt .abus-img-mdul-left-cntlr{
+	width: 37.60%;
+}
+.over-ons-rt .abus-img-mdul-left{
+	height: 598px;
+}
+.over-ons-rt .abus-imgmdlft-sqr{
+	width: 213px;
+	height: 318px;
+	right: -132px;
+	bottom: -40px;
+}
+.over-ons-rt .abus-img-mdul-rt-cntlr{
+	width:  62.40%;
+	bottom: 72px;
+}
+.over-ons-rt .abus-img-mdul-rt{
+	height: 390px;
+}
