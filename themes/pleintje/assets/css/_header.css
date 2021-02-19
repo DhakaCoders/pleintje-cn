@@ -341,7 +341,6 @@ body.allWork .page-content-cntlr{
 body.allWork .page-content-cntlr{
 	margin-right: -272px;
 	overflow: hidden!important;
-	overflow-y: hidden;
 
 }
 body.allWork{
@@ -372,6 +371,7 @@ body.allWork .body-cntlr .mobile-menu-cntlr{
 }
 .allWork .hamburger-icon{
 	height: 13px;
+	width: 12px;
 }
 .allWork .hamburger-icon span{
 	width: 13px;
