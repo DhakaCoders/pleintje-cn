@@ -64,3 +64,56 @@
 	width: 50%;
 	padding-right: 40px;
 }
+
+
+@media(max-width: 991px){
+	.pn-con-pdf{
+		height: 800px;
+		border: 25px solid #E48AA4;
+	}
+	.pn-con {
+	    padding-top: 65px;
+	    padding-bottom: 65px;
+	}
+	.pn-con-bar strong{
+		font-size: 16px;
+	}
+}
+@media(max-width: 767px){
+	.pn-con-pdf {
+	    height: 650px;
+	    border: 20px solid #E48AA4;
+	}
+	.pn-con-pdf i{
+		max-width: 100px;
+	}
+	.pn-con {
+	    padding-top: 50px;
+	    padding-bottom: 50px;
+	}
+	.pn-con-bar strong{
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
+@media(max-width: 575px){
+	.pn-con-pdf {
+	    height: 550px;
+	    border-left-width: 15px;
+	    border-right-width: 15px;
+	}
+	.pn-con-hdr-sub-title{
+		font-size: 18px!important;
+		margin-bottom: 10px;
+	}
+	.pn-con {
+	    padding-top: 40px;
+	    padding-bottom: 40px;
+	}
+}
+@media(max-width: 479px){
+	.pn-con-pdf {
+	    border-left-width: 11px;
+	    border-right-width: 11px;
+	}
+}

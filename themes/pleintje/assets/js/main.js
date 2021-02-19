@@ -267,6 +267,17 @@ google.maps.event.addDomListener(window, 'load', initialize);
     }
 
 
+    if (windowWidth <= 767) {
+      $('.ftr-menu h6').on('click', function(){
+        $(this).toggleClass('active');
+        $(this).parent().siblings().find('h6').removeClass('active');
+        $(this).parent().find('.ftr-menu-des').slideToggle(300);
+        $(this).parent().siblings().find('.ftr-menu-des').slideUp(300);
+      });
+
+    }
+
+
      /*start of Milon*/
      $('.wpforms-error').on('click', function(){
         $(this).parents('.wpforms-field').removeClass('wpforms-has-error');
