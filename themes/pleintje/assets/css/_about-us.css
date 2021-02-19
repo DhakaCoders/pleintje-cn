@@ -3,13 +3,14 @@
 	align-items: center;
 }
 .over-ons-lft{
-	width: 37.12%;
+	width: 41.42%;
 	display: flex;
 	align-items: center;
 }
 .over-ons-lft-desc{
-	max-width: 465px;
+	max-width: 475px;
 	width: 100%;
+	padding-right: 10px;
 }
 .over-ons-lft-title{
 	margin-bottom: 40px;
@@ -18,7 +19,7 @@
 	color: #E48AA4;
 }
 .over-ons-rt{
-	width: 62.88%;
+	width: 58.58%;
 	margin: 0 -10px;
 	position: relative;
 }
@@ -87,4 +88,31 @@
 }
 .ovo-gallery-wrap-sec{
 	padding: 40px 0 70px;
+}
+
+
+/*responsive*/
+@media(max-width: 1399px){
+
+}
+@media(max-width: 1199px){
+	
+}
+@media(max-width: 991px){
+	
+}
+@media(max-width: 767px){
+	
+}
+@media(max-width: 639px){
+	
+}
+@media(max-width: 575px){
+	
+}
+@media(max-width: 479px){
+	
+}
+@media(max-width: 359px){
+	
 }
