@@ -243,6 +243,20 @@ google.maps.event.addDomListener(window, 'load', initialize);
       asNavFor: '.vsNavSlider',
       prevArrow: $('.verblijf-slider-ctlr .fl-nxt-prev .fl-prev'),
       nextArrow: $('.verblijf-slider-ctlr .fl-nxt-prev .fl-next'),
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
     });
     $('.vsNavSlider').slick({
       slidesToShow: 4,
@@ -263,6 +277,20 @@ google.maps.event.addDomListener(window, 'load', initialize);
         dots: true,
         prevArrow: $('.verblijf-slider-ctlr .fl-nxt-prev .fl-prev'),
         nextArrow: $('.verblijf-slider-ctlr .fl-nxt-prev .fl-next'),
+        responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
       });
     }
 
