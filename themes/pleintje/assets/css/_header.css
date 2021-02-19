@@ -303,6 +303,20 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 .mobile-hamburger{
 	display: none;
 }
+.mobile-menu-cntlr{
+	width: 272px;
+	background: #F398B2;
+	color: #fff;
+	padding: 0 28px;
+	padding-top: 67px;
+	padding-bottom: 47px;
+	position: relative;
+	display: none;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	display: none;
+}
 
 
 /*responsive*/
@@ -395,18 +409,7 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 
 	/*mobile menu*/
 	.mobile-menu-cntlr{
-		width: 272px;
-		background: #F398B2;
-		color: #fff;
-		padding: 0 28px;
-		padding-top: 67px;
-		padding-bottom: 47px;
-		position: relative;
-		display: none;
-		transition: all 0.5s;
-		-ms-transition: all 0.5s;
-		-webkit-transition: all 0.5s;
-		display: none;
+		
 	}
 	.mobile-menu-cntlr:after{
 		position: absolute;
