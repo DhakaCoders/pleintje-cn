@@ -288,7 +288,12 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	color: #212529;
 	padding-bottom: 5px;
 	position: relative;
+	display: inline-block;
 }
+.hdr-right a:hover{
+	color: #e48aa4;
+}
+
 .hdr-right a:after{
 	content: "";
 	position: absolute;
@@ -316,8 +321,68 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	display: none;
+	float: left;
+	margin-left: -272px;
+}
+body.allWork .page-content-cntlr{
+	float: left;
+	width: 100%;
+	transition: initial;
+	-ms-transition: initial;
+	-webkit-transition: initial;
+}
+.page-content-cntlr{
+	float: none;
 }
 
+.body-cntlr{
+	overflow: hidden;
+}
+body.allWork .page-content-cntlr{
+	margin-right: -272px;
+	overflow: hidden!important;
+	overflow-y: hidden;
+
+}
+body.allWork{
+	overflow-y: hidden;
+}
+body.allWork .body-cntlr .mobile-menu-cntlr{
+	display: block;
+	margin-left: 0;
+	z-index: 999999;
+}
+.hamburger-cross-title{
+	display: none;
+	font-family: Open Sans;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 1;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: #212529;
+	padding-left: 3px;
+}
+.allWork .hamburger-cross-title{
+	display: block;
+}
+.allWork .hamburger-title{
+	display: none;
+}
+.allWork .hamburger-icon{
+	height: 13px;
+}
+.allWork .hamburger-icon span{
+	width: 13px;
+	top: 6px;
+	transform: rotate(-45deg);
+}
+.allWork .hamburger-icon span:nth-child(2){
+	width: 13px;
+	top: 6px;
+	transform: rotate(45deg);
+}
 
 /*responsive*/
 @media(max-width: 1599px){
@@ -326,6 +391,9 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	}
 	nav.main-nav > ul > li{
 		padding: 0 10px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children:hover ul.sub-menu{
+		padding-left: 10px;
 	}
 }
 @media(max-width: 1499px){
@@ -349,6 +417,9 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	}
 	nav.main-nav > ul > li{
 		padding: 0 7px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children:hover ul.sub-menu{
+		padding-left: 7px;
 	}
 	nav.main-nav > ul > li > a{
 		font-size: 13px;
@@ -409,17 +480,21 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 
 	/*mobile menu*/
 	.mobile-menu-cntlr{
-		
+		display: block;
 	}
 	.mobile-menu-cntlr:after{
 		position: absolute;
 		content: "";
 		right: -20px;
-		top: 14px;
+		top: 23px;
 		width: 32px;
 		height: 4px;
 		background: #EC5387;
 		z-index: 9999;
+		display: none;
+	}
+	body.allWork .mobile-menu-cntlr:after{
+		display: block;
 	}
 	.xs-menu{
 		
@@ -427,17 +502,6 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	.main-nav{
 
 	}
-/*	body{
-		overflow: hidden;
-	}
-	body.allWork{
-		float: left;
-		overflow: hidden;
-	}
-	body.allWork .mobile-menu-cntlr{
-		display: block;
-		float: left;
-	}*/
 	/*mobile menu*/
 	nav.main-nav > ul{
 		display: block;
