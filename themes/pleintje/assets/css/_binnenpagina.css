@@ -693,6 +693,13 @@ Gallery design
 	    overflow-y: hidden;
 	    white-space: nowrap;
 	}
+	.table-dsc::-webkit-scrollbar {
+	  width: 6px;
+	}
+	.table-dsc::-webkit-scrollbar-thumb {
+	  background: #E48AA4; 
+	  border-radius: 4px;
+	}
 	.table-dsc table {
 	    width: 700px;
 	}
