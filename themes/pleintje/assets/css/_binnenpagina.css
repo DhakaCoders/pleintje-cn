@@ -720,6 +720,9 @@ Gallery design
 	.realestat-sec{
 		display: none;
 	}
+	.dfp-single-img-slider-module .verblijf-slider-ctlr .slick-slider ul.slick-dots {
+	    bottom: -30px;
+	}
 }
 
 
