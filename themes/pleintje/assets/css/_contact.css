@@ -283,7 +283,7 @@ placeholder
 }
 
 .contact-form-info-cntlr{
-    padding: 85px 40px 80px 80px;
+    padding: 88px 40px 85px 80px;
     background: url(../images/contact-form-info-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -296,7 +296,7 @@ placeholder
 }
 .contact-form-info  ul li{
 	display: block;
-	padding-bottom: 20px;
+	padding-bottom: 22px;
 	position: relative;
 }
 .contact-form-info  ul li span,
@@ -335,7 +335,7 @@ contact-google-map-sec-wrp
 .contact-google-dsc-wrp{
 	background:#8AA4E4;
 	text-align: center;
-	padding: 30px 30px;
+	padding: 35px 30px;
 	color: #fff;
 	margin-bottom: -35px;
 	position: relative;
