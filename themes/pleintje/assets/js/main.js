@@ -362,8 +362,13 @@ if( $('#googlemap').length ){
 }
 
 
-
-
+function mobileMenuCtrl(){
+  var windowWidth = $(window).width();
+  w2 = windowWidth + 272;
+  $('.page-content-cntlr').width(windowWidth);
+  $('.body-cntlr-in').width(w2);
+}
+//mobileMenuCtrl();
 
 
     new WOW().init();

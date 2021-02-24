@@ -308,49 +308,6 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 .mobile-hamburger{
 	display: none;
 }
-.mobile-menu-cntlr{
-	width: 272px;
-	background: #F398B2;
-	color: #fff;
-	padding: 0 28px;
-	padding-top: 67px;
-	padding-bottom: 47px;
-	position: relative;
-	display: none;
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	display: none;
-	float: left;
-	margin-left: -272px;
-}
-body.allWork .page-content-cntlr{
-	float: left;
-	width: 100%;
-	transition: initial;
-	-ms-transition: initial;
-	-webkit-transition: initial;
-}
-.page-content-cntlr{
-	float: none;
-}
-
-.body-cntlr{
-	overflow: hidden;
-}
-body.allWork .page-content-cntlr{
-	margin-right: -272px;
-	overflow: hidden!important;
-
-}
-body.allWork{
-	overflow-y: hidden;
-}
-body.allWork .body-cntlr .mobile-menu-cntlr{
-	display: block;
-	margin-left: 0;
-	z-index: 999999;
-}
 .hamburger-cross-title{
 	display: none;
 	font-family: Open Sans;
@@ -383,7 +340,76 @@ body.allWork .body-cntlr .mobile-menu-cntlr{
 	top: 6px;
 	transform: rotate(45deg);
 }
-
+body.allWork .page-content-cntlr{
+	float: left;
+	width: 100%;
+	transition: initial;
+	-ms-transition: initial;
+	-webkit-transition: initial;
+}
+.page-content-cntlr{
+	float: none;
+}
+.mobile-menu-cntlr{
+	width: 272px;
+	background: #F398B2;
+	color: #fff;
+	padding: 0 28px;
+	padding-top: 67px;
+	padding-bottom: 47px;
+	position: relative;
+	display: none;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	display: none;
+	float: left;
+	left: -272px;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	overflow: auto;
+}
+.body-cntlr{
+	overflow: hidden;
+}
+.body-cntlr-in,body{
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+span.lines{
+	transition-delay: 1s;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+body.allWork{
+	margin-left: 272px;
+	overflow: hidden;
+}
+body.allWork .body-cntlr-in{
+	margin-right: -272px;
+}
+body.allWork .mobile-menu-cntlr{
+	left: 0;
+}
+span.lines {
+    width: 32px;
+    height: 4px;
+    background: #EC5387;
+    display: block;
+    position: absolute;
+    top: 22px;
+    z-index: -999;
+    left: 0;
+    opacity: 0;
+}
+body.allWork span.lines{
+	left: 260px;
+	opacity: 1;
+	z-index: 999;
+}
 /*responsive*/
 @media(max-width: 1599px){
 	nav.main-nav > ul{
@@ -480,20 +506,6 @@ body.allWork .body-cntlr .mobile-menu-cntlr{
 
 	/*mobile menu*/
 	.mobile-menu-cntlr{
-		display: block;
-	}
-	.mobile-menu-cntlr:after{
-		position: absolute;
-		content: "";
-		right: -20px;
-		top: 23px;
-		width: 32px;
-		height: 4px;
-		background: #EC5387;
-		z-index: 9999;
-		display: none;
-	}
-	body.allWork .mobile-menu-cntlr:after{
 		display: block;
 	}
 	.xs-menu{
