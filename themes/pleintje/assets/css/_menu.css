@@ -78,8 +78,14 @@
 	.pn-con-bar strong{
 		font-size: 16px;
 	}
+	.pn-text-module{
+		padding-right: 25px;
+	}
 }
 @media(max-width: 767px){
+	.footer-wrp{
+		border-top: none;
+	}
 	.pn-con-pdf {
 	    height: 650px;
 	    border: 20px solid #E48AA4;
@@ -95,6 +101,21 @@
 		font-size: 14px;
 		line-height: 18px;
 	}
+	.pn-text-module{
+		padding-right: 15px;
+	}
+	.pn-con{
+		position: relative;
+	}
+	.pn-con:after{
+		position: absolute;
+		bottom: 0;
+		left: 20px;
+		right: 20px;
+		content: "";
+		background: #A6A6A6;
+		height: 1px;
+	}
 }
 @media(max-width: 575px){
 	.pn-con-pdf {
@@ -109,6 +130,9 @@
 	.pn-con {
 	    padding-top: 40px;
 	    padding-bottom: 40px;
+	}
+	.pn-text-module{
+		padding-right: 10px;
 	}
 }
 @media(max-width: 479px){
