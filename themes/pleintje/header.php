@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
+<html <?php language_attributes(); ?>> 
+<head> 
+  <meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <?php $favicon = get_theme_mod('favicon'); if(!empty($favicon)) { ?> 
@@ -39,6 +39,18 @@
   </svg>
 <?php wp_head(); ?>
 </head>
+<body <?php body_class(); ?>>
+<?php 
+  $logoObj = get_field('hdlogo', 'options');
+  if( is_array($logoObj) ){
+    $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
+  }else{
+    $logo_tag = '';
+  }
+  $telefoon = get_field('telefoon', 'options');
+  $emailadres = get_field('emailadres', 'options');
+  $smedias = get_field('social_media', 'options');
+?>
 <body class="home">
 <span class="lines"></span>
 <div class="body-cntlr">
@@ -48,49 +60,49 @@
 
       <div class="xs-menu">
         <nav class="main-nav">
-          <ul class="clearfix reset-list">
-            <li class="current-menu-item"><a href="#">home</a></li>
-            <li><a href="#">Over ons</a></li>
-            <li><a href="#">Menukaart</a></li>
-            <li><a href="#">takeaway ontbijt & lunch</a></li>
-            <li><a href="#">Thelene</a></li>
-            <li class="menu-item-has-children">
-              <a href="#">Vakantieverhuur</a>
-              <ul class="sub-menu">
-                <li><a href="#">Casa Helena</a></li>
-                <li><a href="#">Casa del pueblo</a></li>
-              </ul>
-            </li>
-            <li><a href="#">galerij</a></li>
-            <li><a href="#">Evenementen</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+          <?php 
+            $mmenuOptions = array( 
+                'theme_location' => 'cbv_main_menu', 
+                'menu_class' => 'clearfix reset-list',
+                'container' => false
+              );
+            wp_nav_menu( $mmenuOptions ); 
+          ?>
         </nav>
       </div>
-
+      <?php if(!empty($smedias)): ?>
       <div class="xs-socials">
         <ul class="reset-list">
-          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          <?php foreach($smedias as $smedia):  ?>
+            <li>
+              <a target="_blank" href="<?php echo $smedia['url']; ?>">
+                <?php echo $smedia['icon']; ?>
+              </a>
+            </li>
+          <?php endforeach; ?>
         </ul>
       </div>
-
+      <?php endif; ?>
       <div class="xs-contact">
         <ul class="reset-list">
+          <?php if( !empty($telefoon) ): ?>
           <li class="tb-tel">
-            <a href="tel: 059308730">
+            <a href="tel:<?php echo phone_preg($telefoon); ?>">
               <span>Bel ons</span>
               <i><svg class="tel-icon" width="18" height="24" viewBox="0 0 18 24" fill="#ffffff">
                 <use xlink:href="#tel-icon"></use> </svg></i>
               </a>
             </li>
+          <?php endif; ?>
+          <?php if( !empty($emailadres) ): ?>
             <li class="tb-mail">
-              <a href="mailto:pleintje@skynet.be">
+              <a href="mailto:<?php echo $emailadres; ?>">
                 <span>E-mail ons</span>
                 <i><svg class="mail-icon" width="24" height="18" viewBox="0 0 24 18" fill="#ffffff">
                   <use xlink:href="#mail-icon"></use> </svg></i>
                 </a>
               </li>
+          <?php endif; ?>
             </ul>
           </div>
         </div>
@@ -118,20 +130,24 @@
               </div>
               <div class="top-bar-rt">
                <ul class="reset-list">
+                <?php if( !empty($emailadres) ): ?>
                  <li class="tb-mail">
-                  <a href="mailto:pleintje@skynet.be">
-                    <span>t-pleintje@skynet.be</span>
+                  <a href="mailto:<?php echo $emailadres; ?>">
+                    <span><?php echo $emailadres; ?></span>
                     <i><svg class="mail-icon" width="24" height="18" viewBox="0 0 24 18" fill="#ffffff">
                       <use xlink:href="#mail-icon"></use> </svg></i>
                     </a>
                   </li>
+                  <?php endif; ?>
+                  <?php if( !empty($telefoon) ): ?>
                   <li class="tb-tel">
-                    <a href="tel: 059308730">
-                      <span>Tel: 059 30 87 30</span>
+                    <a href="tel: <?php echo phone_preg($telefoon); ?>">
+                      <span>Tel:<?php echo $telefoon; ?></span>
                       <i><svg class="tel-icon" width="18" height="24" viewBox="0 0 18 24" fill="#ffffff">
                         <use xlink:href="#tel-icon"></use> </svg></i>
                       </a>
                     </li>
+                    <?php endif; ?>
                   </ul>
                 </div>
               </div>
@@ -154,29 +170,24 @@
                 <strong class="hamburger-cross-title">SLUIT</strong>
               </div>
               <div class="hdr-lft">
-               <div class="logo">
-                <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.svg"></a>
+              <?php if( !empty( $logo_tag ) ) :?>
+              <div class="logo">
+                <a href="<?php echo esc_url(home_url('/')); ?>">
+                  <?php echo $logo_tag; ?>
+                </a>
               </div>
+              <?php endif; ?>
             </div>
             <div class="hdr-mdl">
               <nav class="main-nav">
-                <ul class="clearfix reset-list">
-                  <li class="home-item current-menu-item"><a href="#"><span>HOME</span></a></li>
-                  <li><a href="#">Over ons</a></li>
-                  <li><a href="#">Menukaart</a></li>
-                  <li><a href="#">takeaway ontbijt & lunch</a></li>
-                  <li><a href="#">Thelene</a></li>
-                  <li class="menu-item-has-children">
-                    <a href="#">Vakantieverhuur</a>
-                    <ul class="sub-menu">
-                      <li><a href="#">Casa Helena</a></li>
-                      <li><a href="#">Casa del pueblo</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">galerij</a></li>
-                  <li><a href="#">Evenementen</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
+                <?php 
+                  $mmenuOptions = array( 
+                      'theme_location' => 'cbv_main_menu', 
+                      'menu_class' => 'clearfix reset-list',
+                      'container' => false
+                    );
+                  wp_nav_menu( $mmenuOptions ); 
+                ?>
               </nav>
             </div>
             <div class="hdr-right">
