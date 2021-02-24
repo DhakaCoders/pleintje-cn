@@ -19,6 +19,9 @@
 	margin-bottom: 15px;
 	line-height: 1.1;
 }
+.dfp-promo-module-title{
+	color: #212529;
+}
 .default-page-con h2{
 	margin-bottom: 28px;
 }
@@ -451,26 +454,10 @@ Gallery design
 	vertical-align: baseline;
 	padding-right: 12px;
 }
-.dfp-btn-int a{
-	width: 170px;
-	height: 50px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 2px solid #525A61;
-	background: transparent;
-	font-size: 16px;
-	line-height: 1;
+.dfp-btn-int .fl-trnsprnt-btn{
+	width: 142px;
+	border-color: #525A61;
 	color: #525A61;
-	letter-spacing: 0.03em;
-	text-transform: uppercase;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 700;
-}
-.dfp-btn-int a.pb-bg{
-	background: #E48AA4;
-	border-color: #E48AA4;
-	color: #fff;
 }
 
 .dfp-single-img-slider-module{
