@@ -205,7 +205,25 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
-   /*start of Noyon*/
+  /*start of Noyon*/
+  var scrollTop = $(".to-top");
+  $(window).scroll(function(){
+    var totop = $('.to-top-cntlr');
+    var scroll = $(window).scrollTop();
+    if(scroll >= 200){
+      totop.addClass('visible');
+    }
+    else{
+      totop.removeClass('visible');
+    }
+  });
+  $(scrollTop).on('click',function(){
+    $('html, body').animate({
+      scrollTop: 0
+    }, 800);
+  });
+
+   
    var hdrheight = $('.header-wrap').height();
    var bnrheight = $('.hm-banner').height();
    var hdrBnrHeight = hdrheight + bnrheight;
