@@ -96,6 +96,14 @@
 .ftr-phone{
 	padding-bottom: 20px;
 }
+.ftr-phone-cntlr span{
+	border: none!important;
+}
+.ftr-phone-cntlr{
+    border-bottom: 2px solid #E48AA4;
+    display: inline-block;
+    vertical-align: baseline;
+}
 .ftr-location a,
 .ftr-email a,
 .ftr-phone a,
