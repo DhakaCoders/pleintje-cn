@@ -375,7 +375,7 @@ form .dropdown-menu li a{
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 49.1%;
+	width: 50%;
 	height: 631px;
 	background: #FCF9F7;
 	z-index: 0;
@@ -387,7 +387,7 @@ form .dropdown-menu li a{
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 49.1%;
+	width: 50%;
 	height: 631px;
 	background: #FCF9F7;
 	z-index: -1;
