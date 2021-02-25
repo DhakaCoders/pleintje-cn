@@ -61,7 +61,7 @@
                 <div class="ftr-menu-des">
                   <?php if( !empty($address) ) printf('<div class="ftr-location"><a href="%s">%s</a></div>', $gmaplink, $address); ?>
                   <?php if( !empty($email) ) printf('<div class="ftr-email"><a href="mailto:%s">%s</a></div>', $email, $email); ?>
-                  <?php if( !empty($telefoon) ) printf('<div class="ftr-phone"><span>Tel:</span><a href="tel:%s">%s</a></div>', phone_preg($telefoon),  $telefoon); ?>
+                  <?php if( !empty($telefoon) ) printf('<div class="ftr-phone"><div class="ftr-phone-cntlr"><span>Tel:</span><a href="tel:%s">%s</a></div></div>', phone_preg($telefoon),  $telefoon); ?>
                   <?php if(!empty($smedias)):  ?>
                     <div class="ftr-social-media">
                     <ul class="reset-list">

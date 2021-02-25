@@ -3,6 +3,7 @@ get_header();
 $intro = get_field('introsec', HOMEID);
 if($intro):
   $introImg = !empty($intro['afbeelding'])? cbv_get_image_src($intro['afbeelding']):'';
+  $introImgtag = !empty($intro['afbeelding'])? cbv_get_image_tag($intro['afbeelding']):'';
 ?>
 <section class="hm-banner">
   <div class="container">
@@ -14,10 +15,12 @@ if($intro):
             <div class="hm-bnr-lft-top-img">
               <img src="<?php echo THEME_URI; ?>/assets/images/bnr-rose-img.svg" alt="">
             </div>
-
             <div class="hm-bnr-lft">
-              <div class="hm-bnr-lft-img inline-bg" style="background-image: url('<?php echo $introImg; ?>');"></div>
+              <div class="hm-bnr-lft-img inline-bg" style="background-image: url('<?php echo $introImg; ?>');">
+                <?php echo $introImgtag; ?>
+              </div>
             </div>
+
           </div>
           <div class="hm-bnr-right">
             <div class="hm-bnr-rt-desc">
@@ -44,10 +47,12 @@ if($intro):
     <div class="row">
       <div class="col-md-12">
         <div class="industry-cntlr">
-          <h4 class="industry-title fl-h2">Enim laoreet tortor nisi, parturient. (H4)</h4>
-          <p>Mauris vitae aliquam nullam metus suscipit. Et urna mauris neque.</p>
-          <div class="industry-btn">
-            <a class="fl-trnsprnt-btn" href="#">menu</a>
+          <div class="industry-cntlr-inr">
+              <h4 class="industry-title fl-h2">Enim laoreet tortor nisi, parturient. (H4)</h4>
+              <p>Mauris vitae aliquam nullam metus suscipit. Et urna mauris neque.</p>
+              <div class="industry-btn">
+                <a class="fl-trnsprnt-btn" href="#">menu</a>
+              </div>
           </div>
         </div>
       </div>
@@ -115,6 +120,7 @@ if($intro):
         <div class="residents-wrap">
           <span class="residents-rt-top-sqr"></span>
           <div class="residents-cntlr industry-cntlr inline-bg mb-72" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/industry-bg-img.jpg');">
+          <div class="residents-cntlr-inr">
             <?php 
             if( !empty($cta['titel']) ) printf('<h4 class="industry-title fl-h2">%s</h4>', $cta['titel']);
             if( !empty($cta['beschrijving']) ) echo wpautop($cta['beschrijving']);
