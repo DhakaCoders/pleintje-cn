@@ -10,8 +10,8 @@
   $telefoon = get_field('telefoon', 'options');
   $email = get_field('emailadres', 'options');
   $gmaplink = !empty($gmurl)?$gmurl: 'javascript:void()';
-
   $smedias = get_field('social_media', 'options');
+  $copyright_text = get_field('copyright_text', 'options');
 ?>
 <footer class="footer-wrp">
   <!-- scroll to top mobile -->
