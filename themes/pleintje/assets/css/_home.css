@@ -354,6 +354,9 @@
 	}
 }
 @media(max-width: 1599px){
+	.home-popup{
+		padding: 38px 0 35px 0;
+	}
 	.hm-bnr-rt-desc-title{
 		font-size: 44px!important;
 	}
@@ -362,6 +365,9 @@
 	}
 }
 @media(max-width: 1399px){
+	.home-popup{
+		padding: 33px 0 30px 0;
+	}
 	.hm-banner-cntlr{
 		padding-bottom: 110px;
 	}
