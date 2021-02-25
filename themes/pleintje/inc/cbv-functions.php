@@ -102,10 +102,11 @@ function wpmu_role_based_style() {
 
 // for back-end; comment out if you don't want to hide in back-end
 add_action( 'admin_footer', 'wpmu_role_based_style', 99 );
-function cbv_table( $table){
+function cbv_table( $table, $title =''){
   if ( ! empty ( $table ) ) {
-    echo '<div class="dfp-tbl-wrap block-930">
-    <div class="table-dsc" data-aos="fade-up" data-aos-delay="200">
+    echo '<div class="dfp-tbl-wrap">';
+    if( !empty($title) ) printf('<h3>%s</h3>', $title);
+    echo '<div class="table-dsc" data-aos="fade-up" data-aos-delay="200">
     <table>';
     if ( ! empty( $table['caption'] ) ) {
       echo '<caption>' . $table['caption'] . '</caption>';
@@ -126,10 +127,14 @@ function cbv_table( $table){
     $i = 1;
     foreach ( $table['body'] as $tr ) {
       echo '<tr>';
-      echo '<td><span class="mHc">'.$i.'</span></td>';
+      echo '<td><span class="mHc">'.$i.'.</span></td>';
       foreach ( $tr as $td ) {
         echo '<td>';
-        echo $td['c'];
+        if(!empty($td['c'])){
+          echo $td['c'];
+        }else{
+          echo '-';
+        }
         echo '</td>';
       }
       echo '</tr>';

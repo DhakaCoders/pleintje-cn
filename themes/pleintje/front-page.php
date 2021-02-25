@@ -41,29 +41,36 @@ if($intro):
   </div>
 </section>
 <?php endif; ?>
-
+<?php 
+  $showhide_menu = get_field('showhide_menu', HOMEID);
+  if($showhide_menu):
+    $menu = get_field('menusec', HOMEID);
+?>
 <section class="industry-sec inline-bg" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/industry-bg-img.jpg');">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="industry-cntlr">
           <div class="industry-cntlr-inr">
-              <h4 class="industry-title fl-h2">Enim laoreet tortor nisi, parturient. (H4)</h4>
-              <p>Mauris vitae aliquam nullam metus suscipit. Et urna mauris neque.</p>
-              <div class="industry-btn">
-                <a class="fl-trnsprnt-btn" href="#">menu</a>
-              </div>
+          <?php 
+            if( !empty($menu['titel']) ) printf('<h4 class="industry-title fl-h2">%s</h4>', $menu['titel']);
+            if( !empty($menu['beschrijving']) ) echo wpautop($menu['beschrijving']);
+            $menu_knop = $menu['knop'];
+            if( is_array( $menu_knop ) &&  !empty( $menu_knop['url'] ) ){
+              printf('<div class="industry-btn"><a class="fl-trnsprnt-btn" href="%s" target="%s">%s</a></div>', $menu_knop['url'], $menu_knop['target'], $menu_knop['title']); 
+            }
+          ?>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+<?php endif; ?>
 <?php 
   $showhide_overons = get_field('showhide_overons', HOMEID);
   if($showhide_overons):
     $overons = get_field('overons', HOMEID);
-    //$blokImg = !empty($blok['afbeelding'])? $blok['afbeelding']:'';
 ?>
 <section class="about-us-sec">
   <div class="container-md">
@@ -83,30 +90,32 @@ if($intro):
           </div>
 
           <div class="about-us-img-module">
+            <?php if( !empty($overons['afbeelding_1']) ): ?>
             <div class="abus-img-mdul-left-cntlr abus-img-mdul-col">
               <div class="abus-img-mdul-left">
                 <span class="abus-imgmdlft-sqr"></span>
-                <div class="abus-img-mdul-left-img inline-bg" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/abus-glry-item-img-001.jpg');"></div>
+                <div class="abus-img-mdul-left-img inline-bg" style="background-image: url('<?php echo cbv_get_image_src($overons['afbeelding_1']); ?>');"></div>
               </div>
             </div>
-
+            <?php endif; ?>
+            <?php if( !empty($overons['afbeelding_2']) ): ?>
             <div class="abus-img-mdul-rt-cntlr abus-img-mdul-col">
               <div class="abus-img-mdul-rt">
-                <div class="abus-img-mdul-rt-img inline-bg" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/abus-glry-item-img-002.jpg');"></div>
+                <div class="abus-img-mdul-rt-img inline-bg" style="background-image: url('<?php echo cbv_get_image_src($overons['afbeelding_2']); ?>');"></div>
               </div>
             </div>
-
-
+            <?php endif; ?>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="images-sec inline-bg" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/images-sec-bg.jpg');">
-  <img src="<?php echo THEME_URI; ?>/assets/images/images-sec-bg.jpg" alt="">
+<?php if( !empty($overons['full_afbeelding']) ): ?>
+<section class="images-sec inline-bg" style="background-image: url('<?php echo cbv_get_image_src($overons['full_afbeelding']); ?>');">
+  <?php echo cbv_get_image_tag($overons['full_afbeelding']); ?>
 </section>
-
+<?php endif; ?>
 <?php endif; ?>
 <?php 
   $showhide_cta = get_field('showhide_cta', HOMEID);
@@ -124,10 +133,11 @@ if($intro):
             <?php 
             if( !empty($cta['titel']) ) printf('<h4 class="industry-title fl-h2">%s</h4>', $cta['titel']);
             if( !empty($cta['beschrijving']) ) echo wpautop($cta['beschrijving']);
+            $cta_knop = $cta['knop'];
+            if( is_array( $cta_knop ) &&  !empty( $cta_knop['url'] ) ){
+              printf('<div class="fl-trnsprnt-btn"><a class="fl-trnsprnt-btn" href="%s" target="%s">%s</a></div>', $cta_knop['url'], $cta_knop['target'], $cta_knop['title']); 
+            }
             ?>
-            <div class="industry-btn residents-btn">
-              <a class="fl-trnsprnt-btn" href="#">CADEAUBONNEN</a>
-            </div>
           </div>
         </div>
       </div>

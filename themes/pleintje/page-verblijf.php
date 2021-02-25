@@ -1,5 +1,4 @@
 <?php 
-/*Template Name: Verblijf*/
 get_header(); 
 while ( have_posts() ) :
   the_post();
@@ -221,56 +220,11 @@ while ( have_posts() ) :
           <?php } ?>
           <?php endwhile; ?>
           <?php } ?>
-          <div class="gallery-wrap clearfix">
-            <div class="gallery gallery-columns-2">
-              <figure class="gallery-item">
-                <div class="gallery-icon portrait">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/dfp-img-02.jpg">
-                </div>
-              </figure>
-
-              <figure class="gallery-item">
-                <div class="gallery-icon portrait">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/dfp-img-03.jpg">
-                </div>
-              </figure>
-            </div>
-          </div>
-          <div class="dfp-single-img-module">
-            <div class="dfp-single-img">
-              <img src="<?php echo THEME_URI; ?>/assets/images/dfp-img-11.jpg">
-            </div>
-          </div>
         </article>
       </div>
     </div>
   </div>
 </section>
-
-<?php 
-  $gift_cards = get_field('gift_cards', $thisID);
-  if($gift_cards):
-?>
-<section class="realestat-sec">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="realestat-sec-inr inline-bg" style="background: url('<?php echo THEME_URI; ?>/assets/images/realestate-bg.jpg');">
-          <?php 
-            if( !empty($gift_cards['titel']) ) printf('<h2 class="realestate-title fl-h2">%s</h2>', $gift_cards['titel']);
-            if( !empty($gift_cards['beschrijving']) ) echo wpautop($gift_cards['beschrijving']);
-            $gift_knop = $gift_cards['knop'];
-            if( is_array( $gift_knop ) &&  !empty( $gift_knop['url'] ) ){
-              printf('<a class="fl-trnsprnt-btn" href="%s" target="%s">%s</a>', $gift_knop['url'], $gift_knop['target'], $gift_knop['title']); 
-            }
-          ?>
-          <span class="rs-square"></span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<?php endif; ?>
 <?php get_footer(); ?>
 <?php endwhile; ?>
 <?php get_footer(); ?>
