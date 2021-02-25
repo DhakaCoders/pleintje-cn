@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php 
+get_header(); 
+$intro = get_field('introsec', HOMEID);
+if($intro):
+  $introImg = !empty($intro['afbeelding'])? cbv_get_image_src($intro['afbeelding']):'';
+?>
 <section class="hm-banner">
   <div class="container">
     <div class="row">
@@ -11,14 +16,16 @@
             </div>
 
             <div class="hm-bnr-lft">
-              <div class="hm-bnr-lft-img inline-bg" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/banner-img.jpg');"></div>
+              <div class="hm-bnr-lft-img inline-bg" style="background-image: url('<?php echo $introImg; ?>');"></div>
             </div>
           </div>
           <div class="hm-bnr-right">
             <div class="hm-bnr-rt-desc">
-              <h1 class="fl-h1 hm-bnr-rt-desc-title">EROS QUAM UT<br> SOLLICITUDIN.(H1)</h1>
-              <h4 class="fl-h4 hm-bnr-rt-desc-sub-title">Proin eu vitae sit pellentesque.</h4>
-              <p>Nulla purus arcu non facilisi leo, eu, lorem. Mattis odio<br> egestas mauris vitae aliquam nullam metus suscipit. Et urna<br> mauris neque sit ac sit.</p>
+            <?php 
+              if( !empty($intro['titel']) ) printf('<h1 class="fl-h1 hm-bnr-rt-desc-title">%s</h1>', $intro['titel']);
+              if( !empty($intro['subtitel']) ) printf('<h4 class="fl-h4 hm-bnr-rt-desc-sub-title">%s</h4>', $intro['subtitel']);
+              if( !empty($intro['beschrijving']) ) echo wpautop($intro['beschrijving']);
+            ?>
               <div class="hm-bnr-rt-desc-btn">
                 <a class="fl-pink-btn" href="#"> OVER ONS</a>
                 <a class="fl-trnsprnt-btn brd-2nd-btn" href="#">BUTTON</a>
@@ -30,7 +37,7 @@
     </div>
   </div>
 </section>
-
+<?php endif; ?>
 
 <section class="industry-sec inline-bg" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/industry-bg-img.jpg');">
   <div class="container">
@@ -47,7 +54,12 @@
     </div>
   </div>
 </section>
-
+<?php 
+  $showhide_overons = get_field('showhide_overons', HOMEID);
+  if($showhide_overons):
+    $overons = get_field('overons', HOMEID);
+    //$blokImg = !empty($blok['afbeelding'])? $blok['afbeelding']:'';
+?>
 <section class="about-us-sec">
   <div class="container-md">
     <div class="row">
@@ -55,11 +67,10 @@
         <div class="about-us-cntlr">
           <div class="about-us-desc-cntlr">
             <div class="about-us-desc">
-              <h2 class="fl-h1 about-us-desc-title">OVER ONS (H2)</h2>
-              <p>Odio cum pellentesque ut nisl. Eget porttitor porta rhoncus euismod massa diam.</p>
-              <p>Ut dictumst sed quisque nunc. Massa tincidunt turpis eu vitae amet, in. Etiam etiam neque varius eu faucibus id euismod consectetur.</p>
-              <p>Pharetra sit eget netus in. Interdum consequat at odio erat. Dictum tincidunt nunc purus non tortor. Ut felis, nunc elementum mus sed sed in nibh turpis.</p>
-
+            <?php 
+              if( !empty($overons['titel']) ) printf('<h2 class="fl-h1 about-us-desc-title">%s</h2>', $overons['titel']);
+              if( !empty($overons['beschrijving']) ) echo wpautop($overons['beschrijving']);
+            ?>
               <div class="about-us-desc-btn">
                 <a class="fl-pink-btn" href="#">OVER ONS</a>
               </div>
@@ -87,12 +98,16 @@
     </div>
   </div>
 </section>
-
-
 <section class="images-sec inline-bg" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/images-sec-bg.jpg');">
   <img src="<?php echo THEME_URI; ?>/assets/images/images-sec-bg.jpg" alt="">
 </section>
 
+<?php endif; ?>
+<?php 
+  $showhide_cta = get_field('showhide_cta', HOMEID);
+  if($showhide_cta):
+    $cta = get_field('ctasec', HOMEID);
+?>
 <section class="residents-sec">
   <div class="container">
     <div class="row">
@@ -100,8 +115,10 @@
         <div class="residents-wrap">
           <span class="residents-rt-top-sqr"></span>
           <div class="residents-cntlr industry-cntlr inline-bg mb-72" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/industry-bg-img.jpg');">
-            <h4 class="industry-title fl-h2">Eget habitant pulvinar nisi, mattis. (H4)</h4>
-            <p>Molestie egestas quis risus, elementum porttitor ac. Odio augue purus amet.</p>
+            <?php 
+            if( !empty($cta['titel']) ) printf('<h4 class="industry-title fl-h2">%s</h4>', $cta['titel']);
+            if( !empty($cta['beschrijving']) ) echo wpautop($cta['beschrijving']);
+            ?>
             <div class="industry-btn residents-btn">
               <a class="fl-trnsprnt-btn" href="#">CADEAUBONNEN</a>
             </div>
@@ -111,4 +128,5 @@
     </div>
   </div>
 </section>
+<?php endif; ?>
 <?php get_footer(); ?>
