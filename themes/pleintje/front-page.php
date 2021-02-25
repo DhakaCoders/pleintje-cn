@@ -9,10 +9,12 @@
             <div class="hm-bnr-lft-top-img">
               <img src="<?php echo THEME_URI; ?>/assets/images/bnr-rose-img.svg" alt="">
             </div>
-
             <div class="hm-bnr-lft">
-              <div class="hm-bnr-lft-img inline-bg" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/banner-img.jpg');"></div>
+              <div class="hm-bnr-lft-img inline-bg" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/banner-img.jpg');">
+                <img src="<?php echo THEME_URI; ?>/assets/images/banner-img.jpg">
+              </div>
             </div>
+
           </div>
           <div class="hm-bnr-right">
             <div class="hm-bnr-rt-desc">
