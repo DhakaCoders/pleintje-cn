@@ -143,11 +143,11 @@
 		padding-right: 30px;
 	}
 	.ovo-verblijf-single-slider:after{
-		width: 60px;
-		height: 52px;
+		width: 76px;
+		height: 68px;
 		border: 8px solid #e896ac;
 		right: -25px;
-		bottom: -30px;
+		bottom: -45px;
 	}
 	.ovo-industry-sec{
 		padding-bottom: 80px;
@@ -199,11 +199,11 @@
 		padding-right: 20px;
 	}
 	.ovo-verblijf-single-slider:after{
-		width: 57px;
-		height: 50px;
+		width: 67px;
+		height: 62px;
 		border: 8px solid #e896ac;
-		right: -12px;
-		bottom: -10px;
+		right: -31px;
+		bottom: -45px;
 	}
 	.ovo-industry-sec{
 		padding-bottom: 65px;
@@ -214,6 +214,9 @@
 	}
 	.ovo-verblijf-con-inr .verblijf-single-slide-item-img{
 		min-height: 400px;
+	}
+	.over-ons-lft-desc{
+		max-width: 600px;
 	}
 }
 @media(max-width: 767px){
@@ -300,9 +303,13 @@
 	.over-ons-cntlr{
 		margin: 0 -10px;
 	}
+	.over-ons-lft-desc{
+		padding-right: 0;
+	}
 
 	.over-ons-lft{
 		padding: 0 10px;
+		padding-bottom: 20px;
 	}
 	.over-ons-lft-title{
 		margin-bottom: 18px;

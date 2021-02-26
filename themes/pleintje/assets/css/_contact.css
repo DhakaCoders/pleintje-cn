@@ -327,6 +327,14 @@ placeholder
     justify-content: center;
     align-items: center;
 }
+.contact-form-info-socail ul li a{
+	font-size: 18px;
+	color: #fff;
+	font-weight: 300;
+}
+.contact-form-info-socail ul li a:hover{
+		opacity: 0.7;
+}
 
 /*
 ---------------------------
