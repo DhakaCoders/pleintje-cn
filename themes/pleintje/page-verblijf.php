@@ -4,25 +4,29 @@ while ( have_posts() ) :
   the_post();
   $thisID = get_the_ID();
 ?>
-<section class="innerpage-con-wrap">
+<div class="vl-ctlr">
+<section class="verblijf-con">
   <div class="container-sm">
     <div class="row">
       <div class="col-md-12">
-        <article class="default-page-con">
+        <div class="verblijf-con-inr">
           <?php if( have_rows('inhoud') ){ ?>
           <?php while ( have_rows('inhoud') ) : the_row();  ?>
           <?php 
             if( get_row_layout() == 'introductietekst' ){ 
-              $title = get_sub_field('titel');
+              $titel = get_sub_field('titel');
               $afbeelding = get_sub_field('afbeelding');
+              $fc_tekst = get_sub_field('tekst');
           ?>
-          <div class="dfp-promo-module clearfix">
-            <?php 
-              if( !empty($title) ) printf('<div><strong class="dfp-promo-module-title fl-h1">%s</strong></div>', $title); 
-              if( !empty($afbeelding) ){
-                echo '<div class="dfp-plate-one-img-bx">'. cbv_get_image_tag($afbeelding).'</div>';
-              }
-            ?>
+          <div class="pn-con-hdr">
+          <?php 
+            if( !empty($titel) ) printf('<h1 class="pn-con-hdr-title fl-h1">%s</h1>', $titel); 
+            if( !empty($subtitel) ) printf('<strong class="pn-con-hdr-sub-title fl-h4">%s</strong>', $subtitel); 
+            if( !empty( $fc_tekst ) ) echo wpautop($fc_tekst); 
+            if( !empty($afbeelding) ){
+              echo '<div class="dfp-plate-one-img-bx">'. cbv_get_image_tag($afbeelding).'</div>';
+            }
+          ?>
           </div>
           <?php }elseif( get_row_layout() == 'afbeelding' ){ 
               $afbeelding = get_sub_field('fc_afbeelding');
@@ -142,36 +146,40 @@ while ( have_posts() ) :
               $fc_afbeeldingen = get_sub_field('afbeeldingen');
               if( $fc_afbeeldingen ):
           ?>
-          <div class="dfp-single-img-slider-module">
           <div class="verblijf-slider-ctlr">
-            <div class="fl-nxt-prev">
-              <span class="fl-prev">
+          <div class="fl-nxt-prev">
+            <span class="fl-prev">
+              <i>
+                <svg class="fl-prev-svg" width="12" height="20" viewBox="0 0 12 20" fill="#ffffff">
+                  <use xlink:href="#fl-prev-svg"></use></svg>
+                </i>
+              </span>
+              <span class="fl-next">
                 <i>
-                  <svg class="fl-prev-svg" width="12" height="20" viewBox="0 0 12 20" fill="#ffffff">
-                    <use xlink:href="#fl-prev-svg"></use></svg>
+                  <svg class="fl-next-svg" width="12" height="20" viewBox="0 0 12 20" fill="#ffffff">
+                    <use xlink:href="#fl-next-svg"></use></svg>
                   </i>
                 </span>
-                <span class="fl-next">
-                  <i>
-                    <svg class="fl-next-svg" width="12" height="20" viewBox="0 0 12 20" fill="#ffffff">
-                      <use xlink:href="#fl-next-svg"></use></svg>
-                    </i>
-                  </span>
-                </div>
-                <div class="verblijf-single-slider bvsSlider">
-                <?php 
-                  foreach( $fc_afbeeldingen as $fcafbeeldingID ): 
-                  $fcslideImg = !empty($fcafbeeldingID)? cbv_get_image_src( $fcafbeeldingID, 'dftslide' ):''; 
-                ?>
-                  <div class="verblijf-single-slide-item">
-                    <div class="verblijf-single-slide-item-img inline-bg" style="background: url('<?php echo $fcslideImg; ?>');"></div>
-                  </div>
-                <?php endforeach; ?>
-                </div>
               </div>
+              <?php if( $fc_afbeeldingen ): ?>
+              <div class="verblijf-single-slider vsSlider">
+                <?php foreach( $fc_afbeeldingen as $fc_slide_id ): ?>
+                <div class="verblijf-single-slide-item">
+                  <div class="verblijf-single-slide-item-img inline-bg" style="background: url('<?php echo cbv_get_image_src($fc_slide_id, 'about_slide'); ?>');"></div>
+                </div>
+                <?php endforeach; ?>
+              </div>
+
+              <div class="verblijf-single-slider-nav vsNavSlider">
+                <?php foreach( $fc_afbeeldingen as $fc_slide_id ): ?>
+                <div class="verblijf-single-slide-nav-item">
+                  <span><?php echo cbv_get_image_tag($fc_slide_id, 'about_slidethumb'); ?></span>
+                </div>
+                <?php endforeach; ?>
+              </div>
+              <?php endif; ?>
             </div>
-            <hr>
-            <?php endif; ?>
+          <?php endif; ?>
           <?php }elseif( get_row_layout() == 'fcknop' ){
             $roze_knop = get_sub_field('roze_knop');
             $witte_knop = get_sub_field('witte_knop');
@@ -220,11 +228,12 @@ while ( have_posts() ) :
           <?php } ?>
           <?php endwhile; ?>
           <?php } ?>
-        </article>
+        </div>
       </div>
     </div>
   </div>
 </section>
+</div>
 <?php get_footer(); ?>
 <?php endwhile; ?>
 <?php get_footer(); ?>
