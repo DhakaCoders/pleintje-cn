@@ -51,10 +51,10 @@
 </section>
 <?php endif; ?>
 <?php 
-  $showhide_blok = get_field('showhide_blok', $thisID);
-  if($showhide_blok):
-    $blok = get_field('bloksec', $thisID);
-    $blokImg = !empty($blok['afbeelding'])? cbv_get_image_src($blok['afbeelding']):'';
+  $showhide_intro2 = get_field('showhide_intro2', $thisID);
+  if($showhide_intro2):
+    $intro2 = get_field('intro2', $thisID);
+    $blokImg2 = !empty($intro2['afbeelding'])? cbv_get_image_src($intro2['afbeelding']):'';
 ?>
 <section class="lftimg-rgtdes-sec">
   <div class="container-md">
@@ -65,7 +65,7 @@
             <div class="fl-dft-lftimg-rgtdes-lft" style="background-image: url(<?php echo $blokImg; ?>);"></div>
             <div class="fl-dft-lftimg-rgtdes-rgt">
               <?php 
-                if( !empty($blok['beschrijving']) ) echo wpautop($blok['beschrijving']);
+                if( !empty($intro2['beschrijving']) ) echo wpautop($intro2['beschrijving']);
               ?>
             </div>
           </div>
