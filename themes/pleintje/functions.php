@@ -22,9 +22,12 @@ if( !function_exists('cbv_theme_setup') ){
         if(function_exists('add_theme_support')) {
             add_theme_support('category-thumbnails');
         }
-        //add_image_size( 'postgrid', 340, 280, true );
+        add_image_size( 'about_slide', 926, 540, true );
+        add_image_size( 'about_slidethumb', 214, 124, true );
+        add_image_size( 'about_blok', 576, 360, true );
+        add_image_size( 'about_gallery', 450, 282, true );
         
-        // add size to media uploader
+        //add size to media uploader
         add_filter( 'image_size_names_choose', 'cbv_custom_image_sizes' );
         function cbv_custom_image_sizes( $sizes ) {
             return array_merge( $sizes, array(
