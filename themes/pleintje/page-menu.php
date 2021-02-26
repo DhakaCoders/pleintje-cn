@@ -31,7 +31,7 @@
           </div>
           <?php }elseif( get_row_layout() == 'pdf' ){
             $fc_titel = get_sub_field('fc_titel');
-            $fc_pdfs = get_sub_field('pdf_uploaden');
+            $fc_pdfs = get_sub_field('pdfembedder');
           ?>
           <?php if( !empty($fc_titel) ): ?>
           <div class="pn-con-bar">
@@ -42,6 +42,7 @@
           <?php if( !empty($fc_pdfs) ): ?>
           <div class="pn-con-pdf">
             <i><img src="<?php echo THEME_URI; ?>/assets/images/pdf.svg"></i>
+            <?php echo do_shortcode( $fc_pdfs ); ?>
           </div>
           <?php endif; ?>
           <?php }elseif( get_row_layout() == 'teksteditor' ){ ?>

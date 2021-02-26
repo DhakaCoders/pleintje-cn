@@ -208,7 +208,7 @@ while ( have_posts() ) :
           </div>
           <?php }elseif( get_row_layout() == 'pdf' ){
             $fc_titel = get_sub_field('fc_titel');
-            $fc_pdfs = get_sub_field('pdf_uploaden');
+            $fc_pdfs = get_sub_field('pdfembedder');
           ?>
           <?php if( !empty($fc_titel) ): ?>
           <div class="dfp-con-bar-module">
@@ -222,6 +222,7 @@ while ( have_posts() ) :
           <div class="dfp-pdf-module">
             <div class="pn-con-pdf">
               <i><img src="<?php echo THEME_URI; ?>/assets/images/pdf.svg"></i>
+              <?php echo do_shortcode( $fc_pdfs ); ?>
             </div>
           </div>
           <?php endif; ?>
