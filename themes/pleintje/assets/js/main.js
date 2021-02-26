@@ -371,6 +371,6 @@ function mobileMenuCtrl(){
 //mobileMenuCtrl();
 
 
-//new WOW().init();
+new WOW().init();
 
 })(jQuery);

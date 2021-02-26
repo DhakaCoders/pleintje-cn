@@ -26,7 +26,7 @@ while ( have_posts() ) :
             if( !empty($subtitel) ) printf('<strong class="pn-con-hdr-sub-title fl-h4">%s</strong>', $subtitel); 
             if( !empty( $fc_tekst ) ) echo wpautop($fc_tekst); 
             if( !empty($afbeelding) ){
-              echo '<div class="dfp-plate-one-img-bx">'. cbv_get_image_tag($afbeelding).'</div>';
+              echo '<div class="dfp-plate-one-img-bx">'. cbv_get_image_tag($afbeelding, 'about_slide').'</div>';
             }
           ?>
           </div>
@@ -82,10 +82,10 @@ while ( have_posts() ) :
                   <?php 
                     if( $lightbox ){
                       echo "<a data-fancybox='gallery' href='{$image['url']}'>";
-                      echo cbv_get_image_tag( $image, 'dfpageg1' );
+                      echo cbv_get_image_tag( $image, 'about_gallery' );
                       echo "</a>";
                     }else{
-                      echo cbv_get_image_tag( $image, 'dfpageg1' );
+                      echo cbv_get_image_tag( $image, 'about_gallery' );
                     }
                   ?>
                   </div>
@@ -98,7 +98,7 @@ while ( have_posts() ) :
             <?php     
               $poster = get_sub_field('afbeeldingen');
               $video_url = get_sub_field('fc_videourl');
-              $postersrc = !empty($poster)? cbv_get_image_src($poster, 'cargrid'): '';
+              $postersrc = !empty($poster)? cbv_get_image_src($poster, 'dft_poster'): '';
             ?> 
             <div class="ac-fancy-module" >
               <div class="fancy-img inline-bg" style="background-image: url(<?php echo $postersrc; ?>);"></div>

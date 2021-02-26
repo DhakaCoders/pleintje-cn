@@ -2,8 +2,8 @@
 get_header(); 
 $intro = get_field('introsec', HOMEID);
 if($intro):
-  $introImg = !empty($intro['afbeelding'])? cbv_get_image_src($intro['afbeelding']):'';
-  $introImgtag = !empty($intro['afbeelding'])? cbv_get_image_tag($intro['afbeelding']):'';
+  $introImg = !empty($intro['afbeelding'])? cbv_get_image_src($intro['afbeelding'], 'hmintro'):'';
+  $introImgtag = !empty($intro['afbeelding'])? cbv_get_image_tag($intro['afbeelding'], 'hmintro'):'';
 ?>
 <section class="hm-banner">
   <div class="container">
@@ -30,8 +30,16 @@ if($intro):
               if( !empty($intro['beschrijving']) ) echo wpautop($intro['beschrijving']);
             ?>
               <div class="hm-bnr-rt-desc-btn">
-                <a class="fl-pink-btn" href="#"> OVER ONS</a>
-                <a class="fl-trnsprnt-btn brd-2nd-btn" href="#">BUTTON</a>
+                <?php 
+                  $hmknop1 = $intro['knop_1'];
+                  $hmknop2 = $intro['knop_2'];
+                  if( is_array( $hmknop1 ) &&  !empty( $hmknop1['url'] ) ){
+                      printf('<a class="fl-pink-btn" href="%s" target="%s">%s</a>', $hmknop1['url'], $hmknop1['target'], $hmknop1['title']); 
+                  }
+                  if( is_array( $hmknop2 ) &&  !empty( $hmknop2['url'] ) ){
+                      printf('<a class="fl-trnsprnt-btn brd-2nd-btn" href="%s" target="%s">%s</a>', $hmknop2['url'], $hmknop2['target'], $hmknop2['title']); 
+                  }
+                ?>
               </div>
             </div>
           </div>
@@ -82,10 +90,11 @@ if($intro):
             <?php 
               if( !empty($overons['titel']) ) printf('<h2 class="fl-h1 about-us-desc-title">%s</h2>', $overons['titel']);
               if( !empty($overons['beschrijving']) ) echo wpautop($overons['beschrijving']);
+              $over_knop = $overons['knop'];
+              if( is_array( $over_knop ) &&  !empty( $over_knop['url'] ) ){
+                printf('<div class="about-us-desc-btn"><a class="fl-pink-btn" href="%s" target="%s">%s</a></div>', $over_knop['url'], $over_knop['target'], $over_knop['title']); 
+              }
             ?>
-              <div class="about-us-desc-btn">
-                <a class="fl-pink-btn" href="#">OVER ONS</a>
-              </div>
             </div>
           </div>
 
@@ -94,14 +103,14 @@ if($intro):
             <div class="abus-img-mdul-left-cntlr abus-img-mdul-col">
               <div class="abus-img-mdul-left">
                 <span class="abus-imgmdlft-sqr"></span>
-                <div class="abus-img-mdul-left-img inline-bg" style="background-image: url('<?php echo cbv_get_image_src($overons['afbeelding_1']); ?>');"></div>
+                <div class="abus-img-mdul-left-img inline-bg" style="background-image: url('<?php echo cbv_get_image_src($overons['afbeelding_1'], 'hm_overons1'); ?>');"></div>
               </div>
             </div>
             <?php endif; ?>
             <?php if( !empty($overons['afbeelding_2']) ): ?>
             <div class="abus-img-mdul-rt-cntlr abus-img-mdul-col">
               <div class="abus-img-mdul-rt">
-                <div class="abus-img-mdul-rt-img inline-bg" style="background-image: url('<?php echo cbv_get_image_src($overons['afbeelding_2']); ?>');"></div>
+                <div class="abus-img-mdul-rt-img inline-bg" style="background-image: url('<?php echo cbv_get_image_src($overons['afbeelding_2'], 'hm_overons2'); ?>');"></div>
               </div>
             </div>
             <?php endif; ?>
@@ -112,8 +121,8 @@ if($intro):
   </div>
 </section>
 <?php if( !empty($overons['full_afbeelding']) ): ?>
-<section class="images-sec inline-bg" style="background-image: url('<?php echo cbv_get_image_src($overons['full_afbeelding']); ?>');">
-  <?php echo cbv_get_image_tag($overons['full_afbeelding']); ?>
+<section class="images-sec inline-bg" style="background-image: url('<?php echo cbv_get_image_src($overons['full_afbeelding'], 'hm_fullimg'); ?>');">
+  <?php echo cbv_get_image_tag($overons['full_afbeelding'], 'hm_fullimg'); ?>
 </section>
 <?php endif; ?>
 <?php endif; ?>
@@ -135,7 +144,7 @@ if($intro):
             if( !empty($cta['beschrijving']) ) echo wpautop($cta['beschrijving']);
             $cta_knop = $cta['knop'];
             if( is_array( $cta_knop ) &&  !empty( $cta_knop['url'] ) ){
-              printf('<div class="fl-trnsprnt-btn"><a class="fl-trnsprnt-btn" href="%s" target="%s">%s</a></div>', $cta_knop['url'], $cta_knop['target'], $cta_knop['title']); 
+              printf('<div class="industry-btn residents-btn"><a class="fl-trnsprnt-btn" href="%s" target="%s">%s</a></div>', $cta_knop['url'], $cta_knop['target'], $cta_knop['title']); 
             }
             ?>
           </div>

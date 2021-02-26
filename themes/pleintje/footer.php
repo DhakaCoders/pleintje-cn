@@ -9,6 +9,7 @@
   $gmurl = get_field('url', 'options');
   $telefoon = get_field('telefoon', 'options');
   $email = get_field('emailadres', 'options');
+  $btw = get_field('btw', 'options');
   $gmaplink = !empty($gmurl)?$gmurl: 'javascript:void()';
   $smedias = get_field('social_media', 'options');
   $copyright_text = get_field('copyright_text', 'options');
@@ -74,9 +75,7 @@
                     </ul>
                     </div>
                   <?php endif; ?>
-                  <div class="ftr-vat">
-                    <span> BE00 000 000 0</span>
-                  </div>
+                  <?php if( !empty($btw) ) printf('<div class="ftr-vat"><span>%s</span></div>', $btw); ?>
                 </div>
               </div>
             </div>

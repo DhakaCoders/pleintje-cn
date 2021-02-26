@@ -37,7 +37,7 @@
             <span></span>
             <div class="contact-form-info-cntlr">
               <div class="contact-form-info">
-                <h5 class="fl-h5 contact-form-info-title">CONTACT INFO</h5>
+                <h5 class="fl-h5 contact-form-info-title"><?php _e( 'CONTACT INFO', THEME_NAME ); ?></h5>
                 <ul class="reset-list clearfix">
                   <?php if( !empty($address) ) printf('<li><a href="%s">%s</a></li>', $gmaplink, $address); ?>
                   <?php if( !empty($email) ) printf('<li><a href="mailto:%s">%s</a></li>', $email, $email); ?>
