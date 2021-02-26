@@ -12,6 +12,7 @@
   $gmaplink = !empty($gmurl)?$gmurl: 'javascript:void()';
   $smedias = get_field('social_media', 'options');
   $copyright_text = get_field('copyright_text', 'options');
+  $fcknop = get_field('fcknop', 'options');
 ?>
 <footer class="footer-wrp">
   <!-- scroll to top mobile -->
@@ -37,12 +38,10 @@
                   </a>
                 </div>
                 <?php endif; ?>
-                <div class="ftr-logo-btn">
-                  <a href="#">Reserveer</a>
-                </div>
+                <?php if( !empty($fcknop) ) printf('<div class="ftr-logo-btn"><a href="%s">Reserveer</a></div>', $fcknop); ?>
               </div>
               <div class="ftr-menu ftr-col-1">
-                <h6 class="ftr-menu-title">NAVIGATIE</h6>
+                <h6 class="ftr-menu-title"><?php _e( 'NAVIGATIE', THEME_NAME ); ?></h6>
                 <div class="ftr-menu-des">
                   <?php 
                     $cbv_ft_menu = array( 
@@ -57,7 +56,7 @@
               </div>
 
               <div class="ftr-menu ftr-col-2">
-                <h6 class="ftr-menu-title">CONTACT</h6>
+                <h6 class="ftr-menu-title"><?php _e( 'CONTACT', THEME_NAME ); ?></h6>
                 <div class="ftr-menu-des">
                   <?php if( !empty($address) ) printf('<div class="ftr-location"><a href="%s">%s</a></div>', $gmaplink, $address); ?>
                   <?php if( !empty($email) ) printf('<div class="ftr-email"><a href="mailto:%s">%s</a></div>', $email, $email); ?>

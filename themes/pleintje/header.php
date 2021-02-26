@@ -59,6 +59,8 @@
   $telefoon = get_field('telefoon', 'options');
   $emailadres = get_field('emailadres', 'options');
   $smedias = get_field('social_media', 'options');
+  $fc_opening = get_field('fc_openingsuren', 'options');
+  $fcknop = get_field('fcknop', 'options');
 ?>
 <body class="home">
 <span class="lines"></span>
@@ -129,14 +131,16 @@
        <div class="row">
          <div class="col-md-12">
            <div class="top-bar-cntlr">
+            <?php if( $fc_opening ): ?>
              <div class="top-bar-lft">
                <h6 class="opened-time-title">
-                <span>VANDAAG OPEN</span>
+                <?php if( !empty($fc_opening['titel']) ) printf('<span>%s</span>', $fc_opening['titel']); ?>
                 <i><svg class="watch-icon" width="20" height="20" viewBox="0 0 20 20" fill="#fff">
                   <use xlink:href="#watch-icon"></use> </svg></i>
                 </h6>
-                <strong>08u00  -  18u00</strong>
+                <?php if( !empty($fc_opening['tijd']) ) printf('<strong>%s</strong>', $fc_opening['tijd']); ?>
               </div>
+              <?php endif; ?>
               <div class="top-bar-rt">
                <ul class="reset-list">
                 <?php if( !empty($emailadres) ): ?>
@@ -175,8 +179,8 @@
                   <span></span>
                   <span></span>
                 </div>
-                <strong class="hamburger-title">menu</strong>
-                <strong class="hamburger-cross-title">SLUIT</strong>
+                <strong class="hamburger-title"><?php _e( 'menu', THEME_NAME ); ?></strong>
+                <strong class="hamburger-cross-title"><?php _e( 'SLUIT', THEME_NAME ); ?></strong>
               </div>
               <div class="hdr-lft">
               <?php if( !empty( $logo_tag ) ) :?>
@@ -199,9 +203,7 @@
                 ?>
               </nav>
             </div>
-            <div class="hdr-right">
-              <a href="#">RESERVEER</a>
-            </div>
+            <?php if( !empty($fcknop) ) printf('<div class="hdr-right"><a href="%s">Reserveer</a></div>', $fcknop); ?>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 <?php 
+/*Template Name: Verblijf*/
 get_header(); 
 while ( have_posts() ) :
   the_post();
@@ -15,6 +16,7 @@ while ( have_posts() ) :
           <?php 
             if( get_row_layout() == 'introductietekst' ){ 
               $titel = get_sub_field('titel');
+              $subtitel = get_sub_field('subtitel');
               $afbeelding = get_sub_field('afbeelding');
               $fc_tekst = get_sub_field('tekst');
           ?>
@@ -29,15 +31,35 @@ while ( have_posts() ) :
           ?>
           </div>
           <?php }elseif( get_row_layout() == 'afbeelding' ){ 
-              $afbeelding = get_sub_field('fc_afbeelding');
+              $afbeelding1 = get_sub_field('fc_afbeelding1');
+              $afbeelding2 = get_sub_field('fc_afbeelding2');
+              $fullafbeelding = get_sub_field('fc_full_afbeelding');
           ?>
-          <div class="dfp-promo-module clearfix">
-            <?php 
-              if( !empty($afbeelding) ){
-                echo '<div class="dfp-plate-one-img-bx">'. cbv_get_image_tag($afbeelding).'</div>';
-              }
-            ?>
+          <div class="gallery-wrap clearfix">
+            <div class="gallery gallery-columns-2">
+              <?php if( !empty($afbeelding1) ): ?>
+              <figure class="gallery-item">
+                <div class="gallery-icon portrait">
+                  <?php echo cbv_get_image_tag($afbeelding1, 'verblijf_gallery'); ?>
+                </div>
+              </figure>
+              <?php endif; ?>
+              <?php if( !empty($afbeelding2) ): ?>
+              <figure class="gallery-item">
+                <div class="gallery-icon portrait">
+                  <?php echo cbv_get_image_tag($afbeelding2, 'verblijf_gallery'); ?>
+                </div>
+              </figure>
+              <?php endif; ?>
+            </div>
           </div>
+          <?php if( !empty($fullafbeelding) ): ?>
+          <div class="dfp-single-img-module">
+            <div class="dfp-single-img">
+              <?php echo cbv_get_image_tag($fullafbeelding, 'verblijf_full'); ?>
+            </div>
+          </div>
+          <?php endif; ?>
           <?php }elseif( get_row_layout() == 'teksteditor' ){ ?>
           <div class="dfp-text-module clearfix">
             <?php 
@@ -142,6 +164,7 @@ while ( have_posts() ) :
                $fc_titel = !empty(get_sub_field('fc_titel'))?get_sub_field('fc_titel'):'';
                 cbv_table($fc_table, $fc_titel);
           ?>
+          <hr>
           <?php }elseif( get_row_layout() == 'afbeeldingen_slider' ){ 
               $fc_afbeeldingen = get_sub_field('afbeeldingen');
               if( $fc_afbeeldingen ):
@@ -194,7 +217,7 @@ while ( have_posts() ) :
               }
             ?>
           </div>
-          <?php }elseif( get_row_layout() == 'downloads' ){
+          <?php }elseif( get_row_layout() == 'pdf' ){
             $fc_titel = get_sub_field('fc_titel');
             $fc_pdfs = get_sub_field('pdf_uploaden');
           ?>
@@ -209,7 +232,7 @@ while ( have_posts() ) :
           <?php if( !empty($fc_pdfs) ): ?>
           <div class="dfp-pdf-module">
             <div class="pn-con-pdf">
-              <a href="<?php echo $fc_pdfs; ?>"><img src="<?php echo THEME_URI; ?>/assets/images/pdf.svg"></a>
+              <i><img src="<?php echo THEME_URI; ?>/assets/images/pdf.svg"></i>
             </div>
           </div>
           <?php endif; ?>
@@ -234,6 +257,5 @@ while ( have_posts() ) :
   </div>
 </section>
 </div>
-<?php get_footer(); ?>
 <?php endwhile; ?>
 <?php get_footer(); ?>

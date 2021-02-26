@@ -364,6 +364,9 @@ contact-google-map-sec-wrp
 #googlemap{
 	height: 500px;
 }
+.wpforms-field.wpforms-field-html {
+    width: 100% !important;
+}
 /*
 ------------------
  Responsive Css

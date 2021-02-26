@@ -1,5 +1,4 @@
 <?php 
-/*Template Name: Verblijf*/
 get_header(); 
 while ( have_posts() ) :
   the_post();
@@ -26,15 +25,35 @@ while ( have_posts() ) :
             ?>
           </div>
           <?php }elseif( get_row_layout() == 'afbeelding' ){ 
-              $afbeelding = get_sub_field('fc_afbeelding');
+              $afbeelding1 = get_sub_field('fc_afbeelding1');
+              $afbeelding2 = get_sub_field('fc_afbeelding2');
+              $fullafbeelding = get_sub_field('fc_full_afbeelding');
           ?>
-          <div class="dfp-promo-module clearfix">
-            <?php 
-              if( !empty($afbeelding) ){
-                echo '<div class="dfp-plate-one-img-bx">'. cbv_get_image_tag($afbeelding).'</div>';
-              }
-            ?>
+          <div class="gallery-wrap clearfix">
+            <div class="gallery gallery-columns-2">
+              <?php if( !empty($afbeelding1) ): ?>
+              <figure class="gallery-item">
+                <div class="gallery-icon portrait">
+                  <?php echo cbv_get_image_tag($afbeelding1, 'about_gallery'); ?>
+                </div>
+              </figure>
+              <?php endif; ?>
+              <?php if( !empty($afbeelding2) ): ?>
+              <figure class="gallery-item">
+                <div class="gallery-icon portrait">
+                  <?php echo cbv_get_image_tag($afbeelding2, 'about_gallery'); ?>
+                </div>
+              </figure>
+              <?php endif; ?>
+            </div>
           </div>
+          <?php if( !empty($fullafbeelding) ): ?>
+          <div class="dfp-single-img-module">
+            <div class="dfp-single-img">
+              <?php echo cbv_get_image_tag($fullafbeelding, 'verblijf_full'); ?>
+            </div>
+          </div>
+          <?php endif; ?>
           <?php }elseif( get_row_layout() == 'teksteditor' ){ ?>
           <div class="dfp-text-module clearfix">
             <?php 
@@ -187,7 +206,7 @@ while ( have_posts() ) :
               }
             ?>
           </div>
-          <?php }elseif( get_row_layout() == 'downloads' ){
+          <?php }elseif( get_row_layout() == 'pdf' ){
             $fc_titel = get_sub_field('fc_titel');
             $fc_pdfs = get_sub_field('pdf_uploaden');
           ?>
@@ -220,33 +239,14 @@ while ( have_posts() ) :
           <hr>
           <?php } ?>
           <?php endwhile; ?>
-          <?php } ?>
-          <div class="gallery-wrap clearfix">
-            <div class="gallery gallery-columns-2">
-              <figure class="gallery-item">
-                <div class="gallery-icon portrait">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/dfp-img-02.jpg">
-                </div>
-              </figure>
-
-              <figure class="gallery-item">
-                <div class="gallery-icon portrait">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/dfp-img-03.jpg">
-                </div>
-              </figure>
-            </div>
-          </div>
-          <div class="dfp-single-img-module">
-            <div class="dfp-single-img">
-              <img src="<?php echo THEME_URI; ?>/assets/images/dfp-img-11.jpg">
-            </div>
-          </div>
+          <?php }else{ 
+            the_conetnt();
+          } ?>
         </article>
       </div>
     </div>
   </div>
 </section>
-
 <?php 
   $gift_cards = get_field('gift_cards', $thisID);
   if($gift_cards):

@@ -26,6 +26,8 @@ if( !function_exists('cbv_theme_setup') ){
         add_image_size( 'about_slidethumb', 214, 124, true );
         add_image_size( 'about_blok', 576, 360, true );
         add_image_size( 'about_gallery', 450, 282, true );
+        add_image_size( 'verblijf_gallery', 450, 500, true );
+        add_image_size( 'verblijf_full', 926, 530, true );
         
         //add size to media uploader
         add_filter( 'image_size_names_choose', 'cbv_custom_image_sizes' );
@@ -63,7 +65,6 @@ function cbv_theme_scripts(){
     include_once( THEME_DIR . '/enq-scripts/google.maps.php' );
     include_once( THEME_DIR . '/enq-scripts/matchheight.php' );
     include_once( THEME_DIR . '/enq-scripts/app.php' );
-    include_once( THEME_DIR . '/enq-scripts/animate.php' );
     include_once( THEME_DIR . '/enq-scripts/theme.default.php' );
 }
 
