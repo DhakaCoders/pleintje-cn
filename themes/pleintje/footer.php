@@ -13,7 +13,6 @@
   $gmaplink = !empty($gmurl)?$gmurl: 'javascript:void()';
   $smedias = get_field('social_media', 'options');
   $copyright_text = get_field('copyright_text', 'options');
-  $fcknop = get_field('fcknop', 'options');
 ?>
 <footer class="footer-wrp">
   <!-- scroll to top mobile -->
@@ -39,7 +38,7 @@
                   </a>
                 </div>
                 <?php endif; ?>
-                <?php if( !empty($fcknop) ) printf('<div class="ftr-logo-btn"><a href="%s">Reserveer</a></div>', $fcknop); ?>
+                <div class="ftr-logo-btn"><a href="#">Reserveer</a></div>
               </div>
               <div class="ftr-menu ftr-col-1">
                 <h6 class="ftr-menu-title"><?php _e( 'NAVIGATIE', THEME_NAME ); ?></h6>

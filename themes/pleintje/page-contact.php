@@ -82,11 +82,11 @@
     </div>
   </div>
   <?php 
-  if( !empty($gmap['gmap']) ): 
-  $google_map = $gmap['gmap'];
+  if( !empty($gmap['mapembedder']) ): 
+
   ?>
   <div class="contact-google-map-sec-wrp">
-    <div id="googlemap" data-latitude="<?php echo $google_map['lat']; ?>" data-longitude="<?php echo $google_map['lng']; ?>"></div>
+    <?php echo $gmap['mapembedder']; ?>
   </div>  
   <?php endif; ?>  
 </section>

@@ -171,6 +171,9 @@ nav.main-nav > ul > li > a{
 	position: relative;
 	padding-bottom: 26px;
 }
+nav.main-nav > ul > li.home-item > a {
+    text-indent: -99999px;
+}
 nav.main-nav > ul > li.home-item > a:after{
 	background-image: url('../images/home-icon.svg');
 	height: 28px;

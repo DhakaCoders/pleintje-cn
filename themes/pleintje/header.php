@@ -60,7 +60,6 @@
   $emailadres = get_field('emailadres', 'options');
   $smedias = get_field('social_media', 'options');
   $fc_opening = get_field('fc_openingsuren', 'options');
-  $fcknop = get_field('fcknop', 'options');
 ?>
 <body class="home">
 <span class="lines"></span>
@@ -203,7 +202,7 @@
                 ?>
               </nav>
             </div>
-            <?php if( !empty($fcknop) ) printf('<div class="hdr-right"><a href="%s">Reserveer</a></div>', $fcknop); ?>
+            <div class="hdr-right"><a href="#">Reserveer</a></div>
           </div>
         </div>
       </div>
