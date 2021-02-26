@@ -320,6 +320,12 @@ Gallery design
 	padding-left: 0;
 	padding-right: 36px;
 }
+
+.table-dsc table tbody tr td:first-child,
+.table-dsc table tbody tr td:last-child{
+	color: #212529;
+	font-weight: 700;
+}
 /*.table-dsc table tbody tr td:last-child span,
 .table-dsc table thead tr th:last-child span{
 	padding-left: 35px;
@@ -685,11 +691,11 @@ Gallery design
 	    white-space: nowrap;
 	}
 	.table-dsc::-webkit-scrollbar {
-	  width: 6px;
+	  height: 6px;
 	}
 	.table-dsc::-webkit-scrollbar-thumb {
-	  background: #E48AA4; 
-	  border-radius: 4px;
+	  background: #E48AA4;
+	  border-radius: 8px;
 	}
 	.table-dsc table {
 	    width: 700px;
