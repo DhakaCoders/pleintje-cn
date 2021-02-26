@@ -328,6 +328,12 @@
 .to-top:hover{
 	background: #6281cc;
 }
+.to-top-wrap{
+	display: none;
+}
+/*.home .to-top-wrap{
+	display: block;
+}*/
 
 
 @media(min-width: 1920px){
@@ -610,7 +616,7 @@
 	}
 }
 @media(max-width: 767px){
-	.to-top-wrap{
+	.home .to-top-wrap{
 		display: block;
 	}
 	.hm-bnr-rt-desc-title{
