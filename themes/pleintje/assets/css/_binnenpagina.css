@@ -86,7 +86,7 @@ ol li::before {
 	padding: 0 5.5px;
 }
 .default-page-con p {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
 }
 
 .dfp-promo-module{
@@ -237,7 +237,7 @@ Gallery design
 
 .gallery-wrap{
 	padding-top: 13px;
-	padding-bottom: 6px;
+	padding-bottom: 16px;
 }
 .gallery {
 	margin-left: -12px;
@@ -482,7 +482,11 @@ Gallery design
 	text-align: center;
 	padding: 85px 0 80px;
 }
-
+.realestat-sec-inr .fl-trnsprnt-btn:hover{
+	color: #E48AA4!important;
+	border-color: #fff!important;
+	background: #fff!important;
+}
 .realestate-title{
 	color: #fff;
 	margin-bottom: 10px;
@@ -717,6 +721,10 @@ Gallery design
 	.dfp-single-img-slider-module .verblijf-slider-ctlr .slick-slider ul.slick-dots {
 	    bottom: -30px;
 	}
+	.dfp-des-lft,
+	.dfp-des-rgt{
+		padding-right: 20px;
+	}
 }
 
 
@@ -829,6 +837,13 @@ Gallery design
 	}
 	.fl-dft-lftimg-rgtdes-rgt{
 		padding-left: 15px;
+	}
+	.dfp-btn-module a{
+		width: 154px!important;
+	}
+	.dfp-des-lft,
+	.dfp-des-rgt{
+		padding-right: 10px;
 	}
 }
 
