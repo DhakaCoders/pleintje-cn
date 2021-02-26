@@ -81,9 +81,14 @@
       </div>
     </div>
   </div>
+  <?php 
+  if( !empty($gmap['gmap']) ): 
+  $google_map = $gmap['gmap'];
+  ?>
   <div class="contact-google-map-sec-wrp">
-    <div id="googlemap" data-latitude="50.850346" data-longitude="4.351721"></div>
-  </div>    
+    <div id="googlemap" data-latitude="<?php echo $google_map['lat']; ?>" data-longitude="<?php echo $google_map['lng']; ?>"></div>
+  </div>  
+  <?php endif; ?>  
 </section>
 <?php endif; ?>
 <?php get_footer(); ?>
