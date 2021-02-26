@@ -4,7 +4,7 @@
 ---------------------
 */
 .contact-form-sec-wrp{
-	padding-top: 60px;
+	padding-top: 70px;
 	padding-bottom: 85px;
 }
 .contact-form-lft{
@@ -100,6 +100,7 @@
 	-webkit-transition: all 0.5s;
 	border-radius: 0;
 	box-shadow: none !important;
+	background: #fff;
 }
 
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-textarea{
@@ -215,7 +216,7 @@
 	padding-left: 2px;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-has-error input {
-    border: 1px solid #D92A2B !important;
+    border: 1px solid #D17181 !important;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .form-privacy-text{
 	width: 100%!important;
@@ -310,11 +311,11 @@ placeholder
 	font-weight: 600;
 	font-family: 'Open Sans', sans-serif;
 }
-.contact-form-info  ul li a:hover{
-	color: #EC5387;
+.contact-form-info ul li a:hover{
+	opacity: .7;
 }
 .contact-form-info-socail ul li a i:hover svg{
-	fill: #EC5387;
+	opacity: .7;
 }
 .contact-form-info-socail ul{
 	margin: 0 -15px;
@@ -343,6 +344,10 @@ contact-google-map-sec-wrp
 }
 .contact-google-dsc-wrp p{
 	margin-bottom: 0;
+	max-width: 1015px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
 .contact-google-dsc-title{
 	margin-bottom: 12px !important;
@@ -359,6 +364,12 @@ contact-google-map-sec-wrp
 @media(max-width: 1599px){
 	.contact-form-dsc p br{
 		display: none;
+	}
+	.contact-form-lft{
+		width: 66%;
+	}
+	.contact-form-rgt{
+		width: 34%;
 	}
 }
 @media(max-width: 1399px){
@@ -409,7 +420,16 @@ contact-google-map-sec-wrp
 	#googlemap {
 	    height: 400px;
 	}
-
+	.contact-form-dsc{
+		max-width: 600px;
+	}
+	.contact-google-dsc-wrp{
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	body.page-contact .page-body-rt{
+		height: 551px;
+	}
 	
 }
 
@@ -451,6 +471,9 @@ contact-google-map-sec-wrp
 	#googlemap {
 	    height: 350px;
 	}
+	body.page-contact .page-body-rt {
+	    height: 460px!important;
+	}
 }
 
 @media(max-width: 575px){
@@ -467,6 +490,9 @@ contact-google-map-sec-wrp
 	#googlemap {
 	    height: 320px;
 	}
+	body.page-contact .page-body-rt {
+	    height: 357px!important;
+	}
 }
 
 @media(max-width: 479px){
@@ -476,9 +502,13 @@ contact-google-map-sec-wrp
 	.contact-form-dsc {
 	    padding-right: 0;
 	}
-
+	body.page-contact .page-body-rt {
+	    height: 365px!important;
+	}
 }
 
 @media(max-width: 359px){
-
+	body.page-contact .page-body-rt {
+	    height: 387px!important;
+	}
 }

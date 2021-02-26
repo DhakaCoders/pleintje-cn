@@ -38,7 +38,22 @@
 	padding-left: 12px;
 	padding-right: 12px;
 }
-
+.verblijf-single-slide-nav-item span{
+	position: relative;
+	display: block;
+}
+.vsNavSlider .slick-active + .slick-active + .slick-active + .slick-active span:after{
+	content: '';
+	background: linear-gradient(270.28deg, #FFFFFF -12.9%, rgba(255, 255, 255, 0.79) 42.81%, rgba(255, 255, 255, 0) 99.71%);
+	-ms-background: linear-gradient(270.28deg, #FFFFFF -12.9%, rgba(255, 255, 255, 0.79) 42.81%, rgba(255, 255, 255, 0) 99.71%);
+	-webkit-background: linear-gradient(270.28deg, #FFFFFF -12.9%, rgba(255, 255, 255, 0.79) 42.81%, rgba(255, 255, 255, 0) 99.71%);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 5;
+}
 
 .verblijf-slider-ctlr.verblijf-single-slide-item{
 	display: none!important;
@@ -111,8 +126,17 @@
 		display: none;
 	}
 	.verblijf-con{
-		padding-top: 60px;
+		padding-top: 55px;
 		padding-bottom: 80px;
+	}
+	.verblijf-con-inr .fl-dft-lftimg-rgtdes{
+		padding-bottom: 30px;
+	}
+	.vl-ctlr hr {
+		margin-bottom: 50px;
+	}
+	.verblijf-con-inr .gallery-wrap{
+		padding-bottom: 10px;
 	}
 }
 @media(max-width: 575px){
@@ -127,8 +151,30 @@
 	    margin-bottom: 30px;
 	}
 	.verblijf-con{
-		padding-top: 50px;
+		padding-top: 40px;
 		padding-bottom: 30px;
+	}
+	.verblijf-con-inr .vl-ctlr .fl-dft-overflow-controller{
+		padding-top: 10px;
+	}
+	.verblijf-con-inr .fl-dft-lftimg-rgtdes{
+		padding-bottom: 20px;
+	}
+	.fl-dft-lftimg-rgtdes.fl-dft-rgtimg-lftdes .fl-dft-lftimg-rgtdes-rgt{
+		padding-right: 15px!important;
+	}
+	.verblijf-con-inr .dfp-tbl-wrap{
+		padding-top: 30px;
+	}
+	.vl-ctlr hr {
+		margin-bottom: 40px;
+	}
+	.verblijf-con-inr .gallery-wrap{
+		padding-bottom: 0;
+	}
+	.fl-dft-lftimg-rgtdes-rgt,
+	.fl-dft-lftimg-rgtdes-rgt{
+		padding-bottom: 0!important;
 	}
 }
 @media(max-width: 479px){
@@ -136,7 +182,13 @@
 	    min-height: 311px;
 	}
 	.verblijf-con{
-		padding-top: 40px;
+		padding-top: 25px;
 		padding-bottom: 0;
+	}
+	.verblijf-con-inr .fl-dft-lftimg-rgtdes{
+		padding-bottom: 10px;
+	}
+	.vl-ctlr hr {
+		margin-bottom: 30px;
 	}
 }

@@ -370,6 +370,7 @@ body.allWork .page-content-cntlr{
 	top: 0;
 	bottom: 0;
 	overflow: auto;
+	z-index: 99;
 }
 .body-cntlr{
 	overflow: hidden;
