@@ -31,14 +31,24 @@
           </div>
           <?php }elseif( get_row_layout() == 'pdf' ){
             $fc_titel = get_sub_field('fc_titel');
+            $is_hide_title = get_sub_field('is_hide_title');
+            $fc_knop = get_sub_field('knop');
             $fc_pdfs = get_sub_field('pdfembedder');
           ?>
-          <?php if( !empty($fc_titel) ): ?>
+          <?php 
+            if( !$is_hide_title ){
+            if( !empty($fc_titel) ): 
+          ?>
+          <?php echo !empty($fc_knop)?'<a href="'.$fc_knop.'">':'';?>
           <div class="pn-con-bar">
             <i><img src="<?php echo THEME_URI; ?>/assets/images/pn-con-bar-icon.svg"></i>
             <strong><?php echo $fc_titel; ?></strong>
           </div>
-          <?php endif; ?>
+          <?php echo !empty($fc_knop)?'</a>':'';?>
+          <?php 
+            endif; 
+            }
+          ?>
           <?php if( !empty($fc_pdfs) ): ?>
           <div class="pn-con-pdf">
             <i><img src="<?php echo THEME_URI; ?>/assets/images/pdf.svg"></i>
