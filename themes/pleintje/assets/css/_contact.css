@@ -75,7 +75,7 @@
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label{
 	display: inline-block;
 	vertical-align: baseline;
-	width: 100%;
+	width: auto;
 	margin: 0;
 	font-size: 16px;
 	line-height: 1;
@@ -194,7 +194,7 @@
     cursor: pointer;
     bottom: 18px;
 }
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-has-error span {
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-has-error label.wpforms-error {
 	font-size: 12px;
     line-height: 1;
     color: #D17181;
@@ -204,14 +204,14 @@
     display: block;
     right: 0;
     padding-right: 12px;
-    font-weight: 400;
+    font-weight: 400!important;
     text-align: right;
     width: auto;
     text-transform: inherit;
     margin-bottom: 0;
 }
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-has-error label.wpforms-error span{
-	font-weight: 700;
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-has-error label.wpforms-error{
+	font-weight: 400;
 	font-size: 12px;
 	padding-left: 2px;
 }
@@ -243,6 +243,20 @@
 }
 .contact-form-wrp .wpforms-container .wpforms-form .form-privacy-text p a:hover{
 	color: #E0861A;
+}
+
+.contact-form-wrp .wpforms-container label.wpforms-field-label span.wpforms-required-label{
+	display: inline-block!important;
+}
+.wpforms-field.wpforms-field-html p{
+	color: #78797B;
+}
+.wpforms-field.wpforms-field-html p a{
+	color: #78797B;
+	text-decoration: underline;
+}
+.wpforms-field.wpforms-field-html p a:hover{
+	color: #e48aa4;
 }
 
 /*
@@ -485,6 +499,15 @@ contact-google-map-sec-wrp
 	body.page-contact .page-body-rt {
 	    height: 460px!important;
 	}
+	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label{
+		font-size: 15px;
+	}
+	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input{
+		font-size: 15px;
+	}
+	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-has-error label.wpforms-error{
+		font-size: 11px;
+	}
 }
 
 @media(max-width: 575px){
@@ -503,6 +526,15 @@ contact-google-map-sec-wrp
 	}
 	body.page-contact .page-body-rt {
 	    height: 357px!important;
+	}
+	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label{
+		font-size: 16px;
+	}
+	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input{
+		font-size: 16px;
+	}
+	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-has-error label.wpforms-error{
+		font-size: 12px;
 	}
 }
 
