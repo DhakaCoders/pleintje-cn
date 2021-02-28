@@ -141,7 +141,7 @@
             <div class="verblijf-single-slider-nav vsNavSlider">
               <?php foreach( $gallery as $gal_id ): ?>
               <div class="verblijf-single-slide-nav-item">
-                <?php echo cbv_get_image_tag($gal_id, 'about_slidethumb'); ?>
+                <span><?php echo cbv_get_image_tag($gal_id, 'about_slidethumb'); ?></span>
               </div>
               <?php endforeach; ?>
             </div>

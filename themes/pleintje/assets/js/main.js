@@ -199,13 +199,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
-  /*start of Ranojit*/
 
-
-
-
-
-  /*start of Noyon*/
   var scrollTop = $(".to-top");
   $(window).scroll(function(){
     var totop = $('.to-top-cntlr');
@@ -241,16 +235,14 @@ google.maps.event.addDomListener(window, 'load', initialize);
     });
   }
 
-   if( $('li.menu-item-has-children a').length ){
-    $('li.menu-item-has-children a').click(function(e){
+   if( $('li.menu-item-has-children > a').length ){
+    $('li.menu-item-has-children > a').click(function(e){
      event.preventDefault();
      $(this).next().slideToggle(300);
      $(this).parent().toggleClass('sub-menu-arrow');
    });
   }
 
-
-    /*start of Shariful*/
 
     $('.vsSlider').slick({
       slidesToShow: 1,
@@ -285,6 +277,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
       //centerMode: true,
       focusOnSelect: true
     });
+
 
     if( $('.bvsSlider').length ){
       $('.bvsSlider').slick({
@@ -323,11 +316,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
     }
 
-
-     /*start of Milon*/
-     $('.wpforms-error').on('click', function(){
-        $(this).parents('.wpforms-field').removeClass('wpforms-has-error');
-      });
+   $('.wpforms-error').on('click', function(){
+      $(this).parents('.wpforms-field').removeClass('wpforms-has-error');
+    });
 
      /*
 -----------------------
